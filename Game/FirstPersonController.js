@@ -142,7 +142,7 @@ export class FirstPersonController {
         //jump translation
         if(this.jump == true){
             this.jump_now =  Date.now()+1;
-            let height = 0.2*Math.sin(0.008*this.jump_now - 0.008*this.jump_start);
+            let height = 0.1*Math.sin(0.008*this.jump_now - 0.008*this.jump_start);
             //console.log(0.1*Math.sin(0.008*this.jump_now - 0.008*this.jump_start));
             if(height < 0){
                 this.jump_phase = -1;

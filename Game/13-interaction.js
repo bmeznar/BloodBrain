@@ -76,8 +76,8 @@ const app = new App(canvas);
 await app.init();
 document.querySelector('.loader-container').remove();
 
-//const gui = new GUI();
-//gui.add(app.controller, 'pointerSensitivity', 0.0001, 0.01);
+const gui = new GUI();
+gui.add(app.controller, 'pointerSensitivity', 0.0001, 0.01);
 //gui.add(app.controller, 'maxSpeed', 0, 10);
 //gui.add(app.controller, 'decay', 0, 1);
 //gui.add(app.controller, 'acceleration', 1, 100);
