@@ -1,10 +1,15 @@
-import { GUI } from '../lib/dat.gui.module.js';
-import { vec3, mat4 } from '../lib/gl-matrix-module.js';
+import { Application } from '../../common/engine/Application.js';
 
-import { Application } from '../common/engine/Application.js';
-import { Node } from '../common/engine/Node.js';
-
+import { GLTFLoader } from './GLTFLoader.js';
 import { Renderer } from './Renderer.js';
+
+
+import { GUI } from '../../lib/dat.gui.module.js';
+import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
+
+import { Node } from '../../common/engine/Node.js';
+
+//import { Renderer } from './Renderer.js';
 import { FirstPersonController } from './FirstPersonController.js';
 
 import { shaders } from './shaders.js';
@@ -12,9 +17,13 @@ import { shaders } from './shaders.js';
 class App extends Application {
 
     async start() {
+        this.loader = new GLTFLoader();
+        await this.loader.load('../Assets/map/lab_map_v2.gltf');
+
+        //FIRST PERSON CONTROLLER
         const gl = this.gl;
 
-        this.renderer = new Renderer(gl);
+        //this.renderer = new Renderer(gl);
 
         this.time = performance.now();
         this.startTime = this.time;
@@ -23,41 +32,46 @@ class App extends Application {
 
         this.camera = new Node();
         this.camera.translation = [0, 1, 0];
-        
         this.camera.projection = mat4.create();
         this.root.addChild(this.camera);
 
         this.controller = new FirstPersonController(this.camera, this.canvas);
+        //FIRST PERSON CONTROLLER
 
-        this.floor = new Node();
-        this.floor.scale = [10, 1, 10];
-        this.root.addChild(this.floor);
+        this.scene = await this.loader.loadScene(this.loader.defaultScene);
+        //this.camera = await this.loader.loadNode('Camera');
+        //console.log(this.camera);
 
-        const [model, texture] = await Promise.all([
-            this.renderer.loadModel('../common/models/floor.json'),
-            this.renderer.loadTexture('../common/images/grass.png', {    // tla
-                mip: true,
-                min: gl.NEAREST_MIPMAP_NEAREST,
-                mag: gl.NEAREST,
-            }),
-        ]);
+        if (!this.scene || !this.camera) {
+            throw new Error('Scene or Camera not present in glTF');
+        }
 
-        this.floor.model = model;
-        this.floor.texture = texture;
-    }
+        /*if (!this.camera.camera) {
+            throw new Error('Camera node does not contain a camera reference');
+        }*/
 
-    update() {
-        this.time = performance.now();
-        const dt = (this.time - this.startTime) * 0.001;
-        this.startTime = this.time;
-
-        this.controller.update(dt);
+        this.renderer = new Renderer(this.gl);
+        this.renderer.prepareScene(this.scene);
+        this.resize();
     }
 
     render() {
-        this.renderer.render(this.root, this.camera);
+        /*if (this.renderer) {
+            this.renderer.render(this.scene, this.camera);
+        }*/
+        this.renderer.render(this.scene, this.camera);
     }
 
+    /*resize() {
+        const w = this.canvas.clientWidth;
+        const h = this.canvas.clientHeight;
+        const aspectRatio = w / h;
+
+        if (this.camera) {
+            this.camera.camera.aspect = aspectRatio;
+            this.camera.camera.updateMatrix();
+        }
+    }*/
     resize() {
         const w = this.canvas.clientWidth;
         const h = this.canvas.clientHeight;
@@ -69,6 +83,14 @@ class App extends Application {
         mat4.perspective(this.camera.projection, fovy, aspect, near, far);
     }
 
+    update() {
+        this.time = performance.now();
+        const dt = (this.time - this.startTime) * 0.001;
+        this.startTime = this.time;
+
+        this.controller.update(dt);
+    }
+
 }
 
 const canvas = document.querySelector('canvas');
@@ -78,6 +100,4 @@ document.querySelector('.loader-container').remove();
 
 const gui = new GUI();
 gui.add(app.controller, 'pointerSensitivity', 0.0001, 0.01);
-//gui.add(app.controller, 'maxSpeed', 0, 10);
-//gui.add(app.controller, 'decay', 0, 1);
-//gui.add(app.controller, 'acceleration', 1, 100);
+gui.add(app.controller, 'maxSpeed', 0, 10);
