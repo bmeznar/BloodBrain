@@ -95,6 +95,12 @@ export class FirstPersonController {
         const forward = [-sin, 0, -cos];
         const right = [cos, 0, -sin];
 
+        
+        //48, -48;
+        //-48. -48
+        //-48, 44
+        //48, 44
+
         // Map user input to the acceleration vector.
         const acc = vec3.create();
         if (this.keys['KeyW']) {
@@ -128,16 +134,19 @@ export class FirstPersonController {
             const decay = Math.exp(dt * Math.log(1 - this.decay));
             vec3.scale(this.velocity, this.velocity, decay);
         }
-
         // Limit speed to prevent accelerating to infinity and beyond.
         const speed = vec3.length(this.velocity);
         if (speed > this.maxSpeed) {
             vec3.scale(this.velocity, this.velocity, this.maxSpeed / speed);
         }
 
+
+        let new_position = vec3.scaleAndAdd(vec3.create(),
+                this.node.translation, this.velocity, dt);
         // Update translation based on velocity (second line of Euler's method).
-        this.node.translation = vec3.scaleAndAdd(vec3.create(),
-            this.node.translation, this.velocity, dt);
+        if(new_position[0] < 48 && new_position[0] > -48 && new_position[2] < 44  && new_position[2] > -44){
+            this.node.translation = new_position;
+        }
 
         //jump translation
         if(this.jump == true){
