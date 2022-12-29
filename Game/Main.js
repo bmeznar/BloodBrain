@@ -1,9 +1,5 @@
 import { Application } from '../../common/engine/Application.js';
 
-import { GLTFLoader } from './GLTFLoader.js';
-import { Renderer } from './Renderer.js';
-
-
 import { GUI } from '../../lib/dat.gui.module.js';
 import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
 
@@ -11,6 +7,9 @@ import { Node } from '../../common/engine/Node.js';
 
 //import { Renderer } from './Renderer.js';
 import { FirstPersonController } from './FirstPersonController.js';
+import { GLTFLoader } from './GLTFLoader.js';
+import { Renderer } from './Renderer.js';
+import { Physics } from './Physics.js';
 
 import { shaders } from './shaders.js';
 
@@ -50,10 +49,16 @@ class App extends Application {
             throw new Error('Camera node does not contain a camera reference');
         }*/
 
+        this.physics = new Physics(this.scene);
+
         this.renderer = new Renderer(this.gl);
         this.renderer.prepareScene(this.scene);
         this.resize();
     }
+
+    /*async load(uri) {
+        this.physics = new Physics(this.scene);
+    }*/
 
     render() {
         /*if (this.renderer) {
@@ -89,6 +94,7 @@ class App extends Application {
         this.startTime = this.time;
 
         this.controller.update(dt);
+        this.physics.update(dt);
     }
 
 }

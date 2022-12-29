@@ -1,8 +1,15 @@
 import { quat, vec3, mat4 } from '../lib/gl-matrix-module.js';
 
-export class FirstPersonController {
+import { Utils } from './Utils.js';
+import { Node } from './Node.js';
 
-    constructor(node, domElement) {
+export class FirstPersonController extends Node {
+
+    constructor(node, domElement, options = {}) {
+        super(options);
+
+        Utils.init(this, this.constructor.defaults, options);
+
         // The node that this controller controls.
         this.node = node;
 
@@ -92,8 +99,8 @@ export class FirstPersonController {
         // Calculate forward and right vectors from the y-orientation.
         const cos = Math.cos(this.yaw);
         const sin = Math.sin(this.yaw);
-        const forward = [-sin, 0, -cos];
-        const right = [cos, 0, -sin];
+        const forward = vec3.set(vec3.create(), -Math.sin(this.yaw), 0, -Math.cos(this.yaw));
+        const right = vec3.set(vec3.create(), Math.cos(this.yaw), 0, -Math.sin(this.yaw));
 
         
         //48, -48;
@@ -181,6 +188,7 @@ export class FirstPersonController {
         // vertical pointer movement causes camera tilting (x-rotation).
         const dx = e.movementX;
         const dy = e.movementY;
+
         this.pitch -= dy * this.pointerSensitivity;
         this.yaw   -= dx * this.pointerSensitivity;
 
@@ -209,3 +217,15 @@ export class FirstPersonController {
     }
 
 }
+
+FirstPersonController.defaults = {
+    aspect           : 1,
+    fov              : 1.5,
+    near             : 0.01,
+    far              : 100,
+    velocity         : [0, 0, 0],
+    pointerSensitivity : 0.002,
+    maxSpeed         : 3,
+    friction         : 0.2,
+    acceleration     : 20
+};
