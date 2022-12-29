@@ -18,7 +18,7 @@ class App extends Application {
 
     async start() {
         this.loader = new GLTFLoader();
-        await this.loader.load('../Assets/map/lab_map_v2.gltf');
+        await this.loader.load('../Assets/map/lab_map.gltf');
 
         //FIRST PERSON CONTROLLER
         const gl = this.gl;
