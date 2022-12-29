@@ -2,7 +2,7 @@ import { mat4 } from '../../lib/gl-matrix-module.js';
 
 import { WebGL } from '../../common/engine/WebGL.js';
 
-import { shaders } from './shaders.js';
+import { shaders } from './shaders_2.js';
 
 // This class prepares all assets for use with WebGL
 // and takes care of rendering.
@@ -190,7 +190,6 @@ export class Renderer {
         const gl = this.gl;
 
         gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-
         const { program, uniforms } = this.programs.simple;
         gl.useProgram(program);
 
