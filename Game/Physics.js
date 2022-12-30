@@ -2,23 +2,22 @@ import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
 
 export class Physics {
 
-    constructor(scene) {
+    constructor(scene, controller) {
         this.scene = scene;
+        this.controller = controller;
     }
 
     update(dt) {
-        this.scene.traverse(node => {
-            // Move every node with defined velocity.
-            if (node.velocity) {
-                vec3.scaleAndAdd(node.translation, node.translation, node.velocity, dt);
-                node.updateMatrix();
+        const node = this.controller.node;
+        
+        // Move every node with defined velocity.
+        //vec3.scaleAndAdd(node.translation, node.translation, node.velocity, dt);
+        //node.updateMatrix();
 
-                // After moving, check for collision with every other node.
-                this.scene.traverse(other => {
-                    if (node !== other) {
-                        this.resolveCollision(node, other);
-                    }
-                });
+        // After moving, check for collision with every other node.
+        this.scene.traverse(other => {
+            if (node !== other && other.mesh) {
+                this.resolveCollision(this.controller, other);
             }
         });
     }
@@ -36,6 +35,30 @@ export class Physics {
     getTransformedAABB(node) {
         // Transform all vertices of the AABB from local to global space.
         const transform = node.getGlobalTransform();
+        const { min, max } = node.mesh.primitives[0].attributes.POSITION;
+        const vertices = [
+            [min[0], min[1], min[2]],
+            [min[0], min[1], max[2]],
+            [min[0], max[1], min[2]],
+            [min[0], max[1], max[2]],
+            [max[0], min[1], min[2]],
+            [max[0], min[1], max[2]],
+            [max[0], max[1], min[2]],
+            [max[0], max[1], max[2]],
+        ].map(v => vec3.transformMat4(v, v, transform));
+
+        // Find new min and max by component.
+        const xs = vertices.map(v => v[0]);
+        const ys = vertices.map(v => v[1]);
+        const zs = vertices.map(v => v[2]);
+        const newmin = [Math.min(...xs), Math.min(...ys), Math.min(...zs)];
+        const newmax = [Math.max(...xs), Math.max(...ys), Math.max(...zs)];
+        return { min: newmin, max: newmax };
+    }
+
+    getTransformedAABBForFirstPersonController(node) {
+        // Transform all vertices of the AABB from local to global space.
+        const transform = node.node.getGlobalTransform();
         const { min, max } = node.aabb;
         const vertices = [
             [min[0], min[1], min[2]],
@@ -59,7 +82,7 @@ export class Physics {
 
     resolveCollision(a, b) {
         // Get global space AABBs.
-        const aBox = this.getTransformedAABB(a);
+        const aBox = this.getTransformedAABBForFirstPersonController(a);
         const bBox = this.getTransformedAABB(b);
 
         // Check if there is collision.
@@ -68,6 +91,8 @@ export class Physics {
             return;
         }
 
+
+        console.log("pride");
         // Move node A minimally to avoid collision.
         const diffa = vec3.sub(vec3.create(), bBox.max, aBox.min);
         const diffb = vec3.sub(vec3.create(), aBox.max, bBox.min);
@@ -99,8 +124,9 @@ export class Physics {
             minDirection = [0, 0, -minDiff];
         }
 
-        vec3.add(a.translation, a.translation, minDirection);
-        a.updateMatrix();
+        //vec3.add(a.translation, a.translation, minDirection);
+        //a.updateMatrix();
+        a.node.translation = vec3.add(vec3.create(), a.node.translation, minDirection);
     }
 
 }

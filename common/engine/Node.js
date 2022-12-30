@@ -150,4 +150,13 @@ export class Node {
         }
     }
 
+    getGlobalTransform() {
+        if (!this.parent) {
+            return mat4.clone(this._matrix);
+        } else {
+            const matrix = this.parent.getGlobalTransform();
+            return mat4.mul(matrix, matrix, this._matrix);
+        }
+    }
+
 }
