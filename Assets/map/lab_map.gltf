@@ -379,6 +379,9 @@
     ],
     "nodes" : [
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 0,
             "name" : "Cylinder.002",
             "rotation" : [
@@ -399,6 +402,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 1,
             "name" : "Cylinder.001",
             "rotation" : [
@@ -419,6 +425,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 2,
             "name" : "Cylinder.003",
             "rotation" : [
@@ -439,6 +448,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 3,
             "name" : "Cylinder.004",
             "rotation" : [
@@ -459,6 +471,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 4,
             "name" : "Cylinder.005",
             "rotation" : [
@@ -479,6 +494,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 5,
             "name" : "Cylinder.006",
             "rotation" : [
@@ -499,6 +517,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 6,
             "name" : "Cylinder.007",
             "rotation" : [
@@ -519,6 +540,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 7,
             "name" : "Cylinder.008",
             "rotation" : [
@@ -539,6 +563,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 8,
             "name" : "Cylinder.009",
             "rotation" : [
@@ -559,6 +586,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 9,
             "name" : "Cylinder.010",
             "rotation" : [
@@ -579,6 +609,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 10,
             "name" : "doors",
             "rotation" : [
@@ -599,6 +632,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 11,
             "name" : "Cylinder.012",
             "rotation" : [
@@ -619,6 +655,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 12,
             "name" : "Cylinder.013",
             "rotation" : [
@@ -639,6 +678,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 13,
             "name" : "Cylinder.014",
             "rotation" : [
@@ -659,6 +701,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 14,
             "name" : "Cylinder.015",
             "rotation" : [
@@ -679,6 +724,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 15,
             "name" : "Cylinder.016",
             "rotation" : [
@@ -699,6 +747,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 16,
             "name" : "Cylinder.017",
             "rotation" : [
@@ -719,6 +770,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 17,
             "name" : "Cylinder.018",
             "rotation" : [
@@ -739,6 +793,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 18,
             "name" : "Cylinder.019",
             "rotation" : [
@@ -759,6 +816,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 19,
             "name" : "Cylinder.020",
             "rotation" : [
@@ -779,6 +839,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 20,
             "name" : "Cylinder.021",
             "rotation" : [
@@ -799,6 +862,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 21,
             "name" : "Cylinder.022",
             "rotation" : [
@@ -819,6 +885,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 22,
             "name" : "Cylinder.023",
             "rotation" : [
@@ -839,6 +908,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 23,
             "name" : "Cylinder.024",
             "rotation" : [
@@ -859,6 +931,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 24,
             "name" : "Cylinder.025",
             "rotation" : [
@@ -879,6 +954,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 25,
             "name" : "Cylinder.026",
             "rotation" : [
@@ -899,6 +977,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 26,
             "name" : "Cylinder.027",
             "rotation" : [
@@ -919,6 +1000,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 27,
             "name" : "Cylinder.028",
             "rotation" : [
@@ -939,6 +1023,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 28,
             "name" : "Cylinder.029",
             "rotation" : [
@@ -959,6 +1046,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 29,
             "name" : "Cylinder.030",
             "rotation" : [
@@ -979,6 +1069,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 30,
             "name" : "Cylinder.031",
             "rotation" : [
@@ -999,6 +1092,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 31,
             "name" : "Cylinder.032",
             "rotation" : [
@@ -1019,6 +1115,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 32,
             "name" : "Cylinder.033",
             "rotation" : [
@@ -1382,6 +1481,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 50,
             "name" : "bench_mesh_Cube.002",
             "rotation" : [
@@ -1402,6 +1504,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 51,
             "name" : "bench_mesh_Cube.007",
             "rotation" : [
@@ -1422,6 +1527,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 52,
             "name" : "bench_mesh_Cube.012",
             "rotation" : [
@@ -1442,6 +1550,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 53,
             "name" : "bench_mesh_Cube.013",
             "rotation" : [
@@ -1462,6 +1573,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 54,
             "name" : "bench_mesh_Cube.014",
             "rotation" : [
@@ -1482,6 +1596,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 55,
             "name" : "sofa_mesh_Cube.003",
             "rotation" : [
@@ -1497,6 +1614,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 56,
             "name" : "sofa_mesh_Cube.001",
             "rotation" : [
@@ -1512,6 +1632,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 57,
             "name" : "sofa_mesh_Cube.002",
             "rotation" : [
@@ -1527,6 +1650,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 58,
             "name" : "sofa_mesh_Cube.004",
             "rotation" : [
@@ -1542,6 +1668,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 59,
             "name" : "sofa_mesh_Cube.005",
             "rotation" : [
@@ -1557,6 +1686,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 60,
             "name" : "sofa_mesh_Cube.006",
             "rotation" : [
@@ -1572,6 +1704,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 61,
             "name" : "sofa_mesh_Cube.007",
             "rotation" : [
@@ -1587,6 +1722,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 62,
             "name" : "sofa_mesh_Cube.008",
             "rotation" : [
@@ -1602,6 +1740,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 63,
             "name" : "sofa_mesh_Cube.009",
             "rotation" : [
@@ -1617,6 +1758,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 64,
             "name" : "table_Cube.001",
             "rotation" : [
@@ -1632,6 +1776,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 65,
             "name" : "table_mesh_Cube",
             "rotation" : [
@@ -1652,6 +1799,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 66,
             "name" : "cupboard_mesh_Cube",
             "rotation" : [
@@ -1687,6 +1837,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 68,
             "name" : "table_mesh_Cube.001",
             "rotation" : [
@@ -1707,6 +1860,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 69,
             "name" : "table_Cube.002",
             "rotation" : [
@@ -1722,6 +1878,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 70,
             "name" : "table_mesh_Cube.002",
             "rotation" : [
@@ -1742,6 +1901,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 71,
             "name" : "counter_Cube.001",
             "rotation" : [
@@ -1762,6 +1924,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 72,
             "name" : "counter_counter_sink_faucet.001",
             "rotation" : [
@@ -1802,6 +1967,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 74,
             "name" : "counter_counter_4_shelves.001",
             "rotation" : [
@@ -1822,6 +1990,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 75,
             "name" : "counter_counter",
             "rotation" : [
@@ -1842,6 +2013,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 76,
             "name" : "counter_counter_side_outlet.003",
             "rotation" : [
@@ -1862,6 +2036,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 77,
             "name" : "counter_Cube.002",
             "rotation" : [
@@ -1882,6 +2059,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 78,
             "name" : "counter_Cube.003",
             "rotation" : [
@@ -1902,6 +2082,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 79,
             "name" : "counter_counter_sink_faucet.002",
             "rotation" : [
@@ -1922,6 +2105,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 80,
             "name" : "counter_counter.001",
             "rotation" : [
@@ -1942,6 +2128,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 81,
             "name" : "counter_counter_4_shelves.002",
             "rotation" : [
@@ -1962,6 +2151,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 82,
             "name" : "ppe_fire_extinguisher_clamp",
             "rotation" : [
@@ -1982,6 +2174,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 83,
             "name" : "counter_Cube.005",
             "rotation" : [
@@ -2002,6 +2197,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 84,
             "name" : "counter_Cube.004",
             "rotation" : [
@@ -2022,6 +2220,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 85,
             "name" : "counter_counter_4_shelves.003",
             "rotation" : [
@@ -2042,6 +2243,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 86,
             "name" : "counter_Cube.006",
             "rotation" : [
@@ -2062,6 +2266,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 87,
             "name" : "counter_counter.002",
             "rotation" : [
@@ -2082,6 +2289,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 88,
             "name" : "counter_counter.003",
             "rotation" : [
@@ -2102,6 +2312,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 89,
             "name" : "counter_counter.004",
             "rotation" : [
@@ -2122,6 +2335,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 90,
             "name" : "counter_counter.005",
             "rotation" : [
@@ -2142,6 +2358,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 91,
             "name" : "counter_counter.006",
             "rotation" : [
@@ -2185,6 +2404,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 93,
             "name" : "counter_counter_4_shelves.004",
             "rotation" : [
@@ -2205,6 +2427,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 94,
             "name" : "counter_counter_4_shelves.005",
             "rotation" : [
@@ -2225,6 +2450,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 95,
             "name" : "counter_counter_4_shelves.006",
             "rotation" : [
@@ -2245,6 +2473,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 96,
             "name" : "counter_counter_4_shelves.007",
             "rotation" : [
@@ -2265,6 +2496,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 97,
             "name" : "counter_counter_4_shelves.008",
             "rotation" : [
@@ -2285,6 +2519,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 98,
             "name" : "counter_counter_4_shelves.009",
             "rotation" : [
@@ -2305,6 +2542,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 99,
             "name" : "ppe_fire_extinguisher_clamp.001",
             "rotation" : [
@@ -2325,6 +2565,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 100,
             "name" : "ppe_fire_extinguisher_clamp.002",
             "rotation" : [
@@ -2345,6 +2588,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 101,
             "name" : "counter_Cube.007",
             "rotation" : [
@@ -2365,6 +2611,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 102,
             "name" : "rack_mesh_Cube.001",
             "rotation" : [
@@ -2789,6 +3038,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 126,
             "name" : "counter_Cube.008",
             "rotation" : [
@@ -2809,6 +3061,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 127,
             "name" : "counter_counter.008",
             "rotation" : [
@@ -2849,6 +3104,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 129,
             "name" : "Cube.091",
             "rotation" : [
@@ -2949,6 +3207,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 134,
             "name" : "Cube.006",
             "rotation" : [
@@ -2969,6 +3230,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 135,
             "name" : "Cube.048",
             "rotation" : [
@@ -3004,6 +3268,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 137,
             "name" : "sofa_mesh_Cube.010",
             "rotation" : [
@@ -3019,6 +3286,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 138,
             "name" : "sofa_mesh_Cube.011",
             "rotation" : [
@@ -3034,6 +3304,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 139,
             "name" : "sofa_mesh_Cube.012",
             "rotation" : [
@@ -3109,6 +3382,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 143,
             "name" : "Cube.103",
             "rotation" : [
@@ -3479,6 +3755,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 163,
             "name" : "Cube.081",
             "rotation" : [
@@ -3494,6 +3773,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 164,
             "name" : "Cube.022",
             "rotation" : [
@@ -3644,6 +3926,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 174,
             "name" : "Cube.033",
             "rotation" : [
@@ -3794,6 +4079,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 184,
             "name" : "arm chair",
             "rotation" : [
@@ -3814,6 +4102,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 185,
             "name" : "Cube.114",
             "rotation" : [
@@ -3844,6 +4135,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 187,
             "name" : "Cube.050",
             "rotation" : [
@@ -3859,6 +4153,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 188,
             "name" : "Cube.052",
             "rotation" : [
@@ -3879,6 +4176,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 189,
             "name" : "Cube.051",
             "rotation" : [
@@ -3899,6 +4199,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 190,
             "name" : "Cube.053",
             "rotation" : [
@@ -3919,6 +4222,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 191,
             "name" : "Cube.056",
             "rotation" : [
@@ -3939,6 +4245,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 192,
             "name" : "Cube.057",
             "rotation" : [
@@ -3954,6 +4263,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 193,
             "name" : "Cube.054",
             "rotation" : [
@@ -3969,6 +4281,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 194,
             "name" : "Cube.058",
             "rotation" : [
@@ -3984,6 +4299,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 195,
             "name" : "Cube.059",
             "rotation" : [
@@ -4069,6 +4387,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 200,
             "name" : "Cube.061",
             "rotation" : [
@@ -4104,6 +4425,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 202,
             "name" : "counter_counter_4_shelves.010",
             "rotation" : [
@@ -4124,6 +4448,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 203,
             "name" : "counter_counter_4_shelves.011",
             "rotation" : [
@@ -4239,6 +4566,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 209,
             "name" : "arm chair.001",
             "rotation" : [
@@ -4259,6 +4589,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 210,
             "name" : "arm chair.002",
             "rotation" : [
@@ -4279,6 +4612,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 211,
             "name" : "arm chair.003",
             "rotation" : [
@@ -4299,6 +4635,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 212,
             "name" : "Cube.012",
             "rotation" : [
@@ -4314,6 +4653,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 213,
             "name" : "Cube.013",
             "rotation" : [
@@ -4329,6 +4671,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 214,
             "name" : "Cube.014",
             "rotation" : [
@@ -4344,6 +4689,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 215,
             "name" : "Cube.015",
             "rotation" : [
@@ -4374,6 +4722,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 217,
             "name" : "Cube.017",
             "rotation" : [
@@ -4389,6 +4740,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 218,
             "name" : "Cube.018",
             "rotation" : [
@@ -4404,6 +4758,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 219,
             "name" : "Cube.019",
             "rotation" : [
@@ -4419,6 +4776,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 220,
             "name" : "Cube.020",
             "rotation" : [
@@ -4434,6 +4794,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 221,
             "name" : "Cube.021",
             "rotation" : [
@@ -4449,6 +4812,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 222,
             "name" : "Cube.063",
             "rotation" : [
@@ -4479,6 +4845,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 224,
             "name" : "bench_mesh_Cube.001",
             "rotation" : [
@@ -4499,6 +4868,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 225,
             "name" : "Cube.065",
             "rotation" : [
@@ -4519,6 +4891,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 226,
             "name" : "Cube.044",
             "rotation" : [
@@ -4539,6 +4914,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 227,
             "name" : "Cube.045",
             "rotation" : [
@@ -4559,6 +4937,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 228,
             "name" : "Cube.046",
             "rotation" : [
@@ -4574,6 +4955,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 229,
             "name" : "Cube.047",
             "rotation" : [
@@ -4589,6 +4973,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 230,
             "name" : "Cube.049",
             "rotation" : [
@@ -4604,6 +4991,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 231,
             "name" : "counter_counter_4_shelves.012",
             "rotation" : [
@@ -4624,6 +5014,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 232,
             "name" : "counter_Cube.010",
             "rotation" : [
@@ -4674,6 +5067,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 235,
             "name" : "arm chair.004",
             "rotation" : [
@@ -4694,6 +5090,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 236,
             "name" : "ppe_fire_extinguisher_clamp.003",
             "rotation" : [
@@ -4714,6 +5113,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 237,
             "name" : "Cube.025",
             "rotation" : [
@@ -4729,6 +5131,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 238,
             "name" : "Cube.068",
             "rotation" : [
@@ -4744,6 +5149,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 239,
             "name" : "Cube.069",
             "rotation" : [
@@ -4759,6 +5167,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 240,
             "name" : "Cube.070",
             "rotation" : [
@@ -4774,6 +5185,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 241,
             "name" : "Cube.071",
             "rotation" : [
@@ -4789,6 +5203,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 242,
             "name" : "Cube.072",
             "rotation" : [
@@ -4804,6 +5221,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 243,
             "name" : "Cube.073",
             "rotation" : [
@@ -4834,6 +5254,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 245,
             "name" : "arm chair.005",
             "rotation" : [
@@ -4854,6 +5277,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 246,
             "name" : "arm chair.006",
             "rotation" : [
@@ -4874,6 +5300,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 247,
             "name" : "Cube.078",
             "rotation" : [
@@ -4909,6 +5338,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 249,
             "name" : "arm chair.007",
             "rotation" : [
@@ -4929,6 +5361,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 250,
             "name" : "arm chair.008",
             "rotation" : [
@@ -4949,6 +5384,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 251,
             "name" : "Cube.076",
             "rotation" : [
@@ -4964,6 +5402,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 252,
             "name" : "counter_Cube.011",
             "rotation" : [
@@ -4984,6 +5425,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 253,
             "name" : "counter_Cube.012",
             "rotation" : [
@@ -5004,6 +5448,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 254,
             "name" : "counter_counter_4_shelves.013",
             "rotation" : [
@@ -5024,6 +5471,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 255,
             "name" : "counter_counter_4_shelves.014",
             "rotation" : [
@@ -5044,6 +5494,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 256,
             "name" : "counter_counter_4_shelves.015",
             "rotation" : [
@@ -5064,6 +5517,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 257,
             "name" : "Cube.077",
             "rotation" : [
@@ -5084,6 +5540,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 258,
             "name" : "Cube.079",
             "rotation" : [
@@ -5104,6 +5563,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 259,
             "name" : "Cube.080",
             "rotation" : [
@@ -5124,6 +5586,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 260,
             "name" : "Cube.082",
             "rotation" : [
@@ -5144,6 +5609,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 261,
             "name" : "Cube.083",
             "rotation" : [
@@ -5164,6 +5632,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 262,
             "name" : "Cube.084",
             "rotation" : [
@@ -5184,6 +5655,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 263,
             "name" : "Cube.085",
             "rotation" : [
@@ -5319,6 +5793,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 270,
             "name" : "Cube.088",
             "rotation" : [
@@ -5339,6 +5816,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 271,
             "name" : "counter_Cube.013",
             "rotation" : [
@@ -5359,6 +5839,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 272,
             "name" : "counter_counter.010",
             "rotation" : [
@@ -5459,6 +5942,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 277,
             "name" : "counter_Cube.014",
             "rotation" : [
@@ -5559,6 +6045,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 282,
             "name" : "counter_Cube.015",
             "rotation" : [
@@ -5659,6 +6148,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 287,
             "name" : "Cube.089",
             "rotation" : [
@@ -5694,6 +6186,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 289,
             "name" : "10778_Toilet_V2",
             "rotation" : [
@@ -5714,6 +6209,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 290,
             "name" : "counter_counter_sink_faucet.003",
             "rotation" : [
@@ -5734,6 +6232,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 291,
             "name" : "Cube.092",
             "rotation" : [
@@ -5769,6 +6270,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 293,
             "name" : "10778_Toilet_V2.001",
             "rotation" : [
@@ -5789,6 +6293,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 294,
             "name" : "10778_Toilet_V2.002",
             "rotation" : [
@@ -5809,6 +6316,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 295,
             "name" : "10778_Toilet_V2.003",
             "rotation" : [
@@ -5829,6 +6339,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 296,
             "name" : "10778_Toilet_V2.004",
             "rotation" : [
@@ -5849,6 +6362,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 297,
             "name" : "10778_Toilet_V2.005",
             "rotation" : [
@@ -5869,6 +6385,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 298,
             "name" : "10778_Toilet_V2.006",
             "rotation" : [
@@ -5889,6 +6408,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 299,
             "name" : "counter_counter_sink_faucet.004",
             "rotation" : [
@@ -5909,6 +6431,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 300,
             "name" : "counter_counter_sink_faucet.005",
             "rotation" : [
@@ -5929,6 +6454,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 301,
             "name" : "counter_counter_sink_faucet.006",
             "rotation" : [
@@ -5949,6 +6477,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 302,
             "name" : "counter_counter_sink_faucet.007",
             "rotation" : [
@@ -5969,6 +6500,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 303,
             "name" : "counter_counter_sink_faucet.008",
             "rotation" : [
@@ -5989,6 +6523,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 304,
             "name" : "counter_counter_sink_faucet.009",
             "rotation" : [
@@ -6009,6 +6546,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 305,
             "name" : "10778_Toilet_V2.007",
             "rotation" : [
@@ -6029,6 +6569,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 306,
             "name" : "ppe_fire_extinguisher_clamp.004",
             "rotation" : [
@@ -6049,6 +6592,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 307,
             "name" : "counter_counter_sink_faucet.010",
             "rotation" : [
@@ -6069,6 +6615,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 308,
             "name" : "counter_counter.011",
             "rotation" : [
@@ -6104,6 +6653,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 310,
             "name" : "Cube.095",
             "rotation" : [
@@ -6119,6 +6671,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 311,
             "name" : "10778_Toilet_V2.008",
             "rotation" : [
@@ -6139,6 +6694,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 312,
             "name" : "10778_Toilet_V2.009",
             "rotation" : [
@@ -6159,6 +6717,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 313,
             "name" : "counter_counter_sink_faucet.011",
             "rotation" : [
@@ -6179,6 +6740,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 314,
             "name" : "counter_counter_sink_faucet.012",
             "rotation" : [
@@ -6214,6 +6778,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 316,
             "name" : "cupboard_mesh_Cube.001",
             "rotation" : [
@@ -6249,6 +6816,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 318,
             "name" : "counter_counter.012",
             "rotation" : [
@@ -6269,6 +6839,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 319,
             "name" : "counter_counter.013",
             "rotation" : [
@@ -6343,6 +6916,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 323,
             "name" : "Cube.099",
             "rotation" : [
@@ -6358,6 +6934,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 324,
             "name" : "Cube.100",
             "rotation" : [
@@ -6378,6 +6957,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 325,
             "name" : "counter_Cube.016",
             "rotation" : [
@@ -6398,6 +6980,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 326,
             "name" : "counter_counter_sink_faucet.013",
             "rotation" : [
@@ -6418,6 +7003,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 327,
             "name" : "ppe_fire_extinguisher_clamp.005",
             "rotation" : [
@@ -6458,6 +7046,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 329,
             "name" : "arm chair.009",
             "rotation" : [
@@ -6558,6 +7149,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 334,
             "name" : "arm chair.010",
             "rotation" : [
@@ -6578,6 +7172,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 335,
             "name" : "Cube.109",
             "rotation" : [
@@ -6598,6 +7195,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 336,
             "name" : "Cube.110",
             "rotation" : [
@@ -6633,6 +7233,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 338,
             "name" : "counter_counter.014",
             "rotation" : [
@@ -6653,6 +7256,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 339,
             "name" : "counter_counter.015",
             "rotation" : [
@@ -6673,6 +7279,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 340,
             "name" : "counter_counter.016",
             "rotation" : [
@@ -6708,6 +7317,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 342,
             "name" : "Cube.115",
             "rotation" : [
@@ -6728,6 +7340,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 343,
             "name" : "Cube.116",
             "rotation" : [
@@ -6748,6 +7363,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 344,
             "name" : "Cube.117",
             "rotation" : [
@@ -6768,6 +7386,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 345,
             "name" : "sofa_mesh_Cube.013",
             "rotation" : [
@@ -6783,6 +7404,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 346,
             "name" : "sofa_mesh_Cube.014",
             "rotation" : [
@@ -6798,6 +7422,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 347,
             "name" : "Cube.119",
             "rotation" : [
@@ -6818,6 +7445,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 348,
             "name" : "Cube.120",
             "rotation" : [
@@ -6838,6 +7468,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 349,
             "name" : "Cube.121",
             "rotation" : [
@@ -6858,6 +7491,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 350,
             "name" : "Cube.122",
             "rotation" : [
@@ -6878,6 +7514,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 351,
             "name" : "Cube.118",
             "rotation" : [
@@ -6893,6 +7532,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 352,
             "name" : "table_mesh_Cube.003",
             "rotation" : [
@@ -6913,6 +7555,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 353,
             "name" : "bench_mesh_Cube.003",
             "rotation" : [
@@ -6933,6 +7578,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 354,
             "name" : "bench_mesh_Cube.004",
             "rotation" : [
@@ -6953,6 +7601,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 355,
             "name" : "bench_mesh_Cube.005",
             "rotation" : [
@@ -6973,6 +7624,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 356,
             "name" : "table_mesh_Cube.004",
             "rotation" : [
@@ -6993,6 +7647,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 357,
             "name" : "Cylinder.011",
             "rotation" : [
@@ -7013,6 +7670,9 @@
             ]
         },
         {
+            "extras" : {
+                "colider" : 1.0
+            },
             "mesh" : 358,
             "name" : "Cube.123",
             "scale" : [
@@ -7084,6 +7744,9 @@
             ]
         },
         {
+            "extras" : {
+                "coliderne" : 1.0
+            },
             "mesh" : 362,
             "name" : "Cube.124",
             "scale" : [
