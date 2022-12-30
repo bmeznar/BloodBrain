@@ -34,8 +34,16 @@ class App extends Application {
         this.camera.projection = mat4.create();
         this.root.addChild(this.camera);
 
-        this.controller = new FirstPersonController(this.camera, this.canvas);
         //FIRST PERSON CONTROLLER
+        this.controller = new FirstPersonController(this.camera, this.canvas);
+        
+        this.shadowCamera = new Node();
+        this.shadowCamera.projection = mat4.create();
+        mat4.perspective(this.shadowCamera.projection, 0.5, 1, 15, 50);
+        this.shadowCamera.translation = [0, 0, 20];
+        this.shadowCamera.aspect = 0.3;
+        this.shadowCamera.near = 15;
+        this.shadowCamera.far = 50;
 
         this.scene = await this.loader.loadScene(this.loader.defaultScene);
         //this.camera = await this.loader.loadNode('Camera');
@@ -45,14 +53,11 @@ class App extends Application {
             throw new Error('Scene or Camera not present in glTF');
         }
 
-        /*if (!this.camera.camera) {
-            throw new Error('Camera node does not contain a camera reference');
-        }*/
-
         this.physics = new Physics(this.scene);
 
         this.renderer = new Renderer(this.gl);
         this.renderer.prepareScene(this.scene);
+        //this.renderer.prepareScene(this.scene_gun);
         this.resize();
     }
 
@@ -65,6 +70,7 @@ class App extends Application {
             this.renderer.render(this.scene, this.camera);
         }*/
         this.renderer.render(this.scene, this.camera);
+        //this.renderer.render(this.scene, this.camera, this.shadowCamera);
     }
 
     /*resize() {
@@ -81,9 +87,9 @@ class App extends Application {
         const w = this.canvas.clientWidth;
         const h = this.canvas.clientHeight;
         const aspect = w / h;
-        const fovy = Math.PI / 2;
+        const fovy = Math.PI/2.5;
         const near = 0.1;
-        const far = 100;
+        const far = 300;
 
         mat4.perspective(this.camera.projection, fovy, aspect, near, far);
     }
