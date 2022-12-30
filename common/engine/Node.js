@@ -34,6 +34,8 @@ export class Node {
             child.parent = this;
         }
         this.parent = null;
+
+        this.extras = options.extras ?? 0;
     }
 
     updateTransformationComponents() {

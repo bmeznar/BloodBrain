@@ -16,7 +16,7 @@ export class Physics {
 
         // After moving, check for collision with every other node.
         this.scene.traverse(other => {
-            if (node !== other && other.mesh) {
+            if (node !== other && other.mesh && other.extras.colider) {
                 this.resolveCollision(this.controller, other);
             }
         });
@@ -84,7 +84,7 @@ export class Physics {
         // Get global space AABBs.
         const aBox = this.getTransformedAABBForFirstPersonController(a);
         const bBox = this.getTransformedAABB(b);
-
+        console.log(bBox, aBox);
         // Check if there is collision.
         const isColliding = this.aabbIntersection(aBox, bBox);
         if (!isColliding) {
@@ -92,7 +92,7 @@ export class Physics {
         }
 
 
-        console.log("pride");
+        console.log(bBox, aBox);
         // Move node A minimally to avoid collision.
         const diffa = vec3.sub(vec3.create(), bBox.max, aBox.min);
         const diffb = vec3.sub(vec3.create(), aBox.max, bBox.min);
