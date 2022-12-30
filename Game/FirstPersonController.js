@@ -44,11 +44,15 @@ export class FirstPersonController extends Node {
         this.pointerSensitivity = 0.002;
 
 
+        //this.in_game = false;
+
         //jump parametres
         this.jump = false;
         this.jump_start = 0;
         this.jump_now = 0;
         this.jump_phase = 0;
+
+        this.bullets = new Node();
 
         this.initHandlers();
     }
@@ -63,6 +67,13 @@ export class FirstPersonController extends Node {
 
         doc.addEventListener('keydown', this.keydownHandler);
         doc.addEventListener('keyup', this.keyupHandler);
+        
+
+        element.addEventListener('click', event => {
+            if(event.button == 0){
+                this.shoot()
+            }
+        });
 
         element.addEventListener('click', e => element.requestPointerLock());
         doc.addEventListener('pointerlockchange', e => {
@@ -109,6 +120,8 @@ export class FirstPersonController extends Node {
         //48, 44
 
         // Map user input to the acceleration vector.
+        
+       
         const acc = vec3.create();
         if (this.keys['KeyW']) {
             vec3.add(acc, acc, forward);
@@ -128,6 +141,8 @@ export class FirstPersonController extends Node {
                 this.jump = true;
             }
         }
+        
+        //console.log(this.keys);
 
         // Update velocity based on acceleration (first line of Euler's method).
         vec3.scaleAndAdd(this.velocity, this.velocity, acc, dt * this.acceleration);
@@ -177,6 +192,16 @@ export class FirstPersonController extends Node {
         quat.rotateY(rotation, rotation, this.yaw);
         quat.rotateX(rotation, rotation, this.pitch);
         this.node.rotation = rotation;
+    }
+
+    shoot(){
+        //console.log("shoot");
+        const bullet_location = this.node.translation;
+        Object.assign(bullet_location, {yaw: this.yaw});
+        Object.assign(bullet_location, {pitch: this.pitch});
+        
+        this.bullets.addChild(this.node.translation, this.yaw, this.pitch);
+        //console.log(bullet_location);
     }
 
     pointermoveHandler(e) {
