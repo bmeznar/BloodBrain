@@ -27,7 +27,7 @@ export class FirstPersonController extends Node {
 
         // We are going to use Euler angles for rotation.
         this.pitch = 0;
-        this.yaw = 0;
+        this.yaw = 4.71;
 
         // This is going to be a simple decay-based model, where
         // the user input is used as acceleration. The acceleration

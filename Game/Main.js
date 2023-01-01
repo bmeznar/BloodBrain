@@ -31,7 +31,7 @@ class App extends Application {
         this.root = new Node();
 
         this.camera = new Node();
-        this.camera.translation = [0, 1, 0];
+        this.camera.translation = [-45, 1, 7];
         this.camera.projection = mat4.create();
         this.root.addChild(this.camera);
 
