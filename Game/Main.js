@@ -12,6 +12,7 @@ import { Renderer } from './Renderer.js';
 import { Physics } from './Physics.js';
 
 import { shaders } from './shaders.js';
+import { Camera } from './Camera.js';
 
 class App extends Application {
 
@@ -46,6 +47,7 @@ class App extends Application {
         this.shadowCamera.far = 50;
 
         this.scene = await this.loader.loadScene(this.loader.defaultScene);
+
         //this.camera = await this.loader.loadNode('Camera');
         //console.log(this.camera);
 
@@ -53,7 +55,7 @@ class App extends Application {
             throw new Error('Scene or Camera not present in glTF');
         }
 
-        this.physics = new Physics(this.scene);
+        this.physics = new Physics(this.scene, this.controller);
 
         this.renderer = new Renderer(this.gl);
         this.renderer.prepareScene(this.scene);

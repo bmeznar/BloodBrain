@@ -13,6 +13,12 @@ export class FirstPersonController extends Node {
         // The node that this controller controls.
         this.node = node;
 
+        this.aabb.min = [-0.1, -0.8, -0.1];
+        this.aabb.max = [0.1, 0.8, 0.1];
+
+        //this.node.mesh.primitives[0].attributes.POSITION.max = [0.2, 0.2, 0.2];
+        //this.node.mesh.primitives[0].attributes.POSITION.min = [-0.2, -0.2, -0.2];
+
         // The activation DOM element.
         this.domElement = domElement;
 
