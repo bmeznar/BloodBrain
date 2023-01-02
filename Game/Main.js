@@ -10,6 +10,7 @@ import { FirstPersonController } from './FirstPersonController.js';
 import { GLTFLoader } from './GLTFLoader.js';
 import { Renderer } from './Renderer.js';
 import { Physics } from './Physics.js';
+import { Zombie } from './Zombie.js';
 
 import { shaders } from './shaders.js';
 import { Camera } from './Camera.js';
@@ -29,16 +30,9 @@ class App extends Application {
         this.startTime = this.time;
 
         //generating zombies
-        this.zombies = new Node();
-        for(let i = 0; i < 20; i++){
-            let zombie = new Node();
-            let x = (Math.random() * 60) - 30;
-            let y = (Math.random() * 60) - 30;
-            zombie.translation = [x,1,y];
-            zombie.projection = mat4.create();
-            this.zombies.addChild(zombie);
-        }
-        
+        this.zombies = new Zombie();
+
+        console.log(this.zombies);
 
         this.root = new Node();
 
