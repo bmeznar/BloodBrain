@@ -17,16 +17,18 @@
     <div style="text-align:center" class="bg">
         <br><br>
         <h1>BloodBrain</h1><br><br>
-        <form method="POST" action="../Game/game.html">
-            Select game mode and start playing!
-            <br><br>
-            <select name="gamemode" id="">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
-            <br><br>
-            <input type="submit" value="Play" id="play">
+        Select game mode and start playing!
+        <form method="POST" action="../Game/game_easy.html">
+            <br>
+            <input type="submit" value="Easy game mode" id="play">
+        </form>
+        <form method="POST" action="../Game/game_medium.html">
+            <br>
+            <input type="submit" value="Medium game mode" id="play">
+        </form>
+        <form method="POST" action="../Game/game_hard.html">
+            <br>
+            <input type="submit" value="Hard game mode" id="play">
         </form>
     </div>
 </body>

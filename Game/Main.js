@@ -28,6 +28,18 @@ class App extends Application {
         this.time = performance.now();
         this.startTime = this.time;
 
+        //generating zombies
+        this.zombies = new Node();
+        for(let i = 0; i < 20; i++){
+            let zombie = new Node();
+            let x = (Math.random() * 60) - 30;
+            let y = (Math.random() * 60) - 30;
+            zombie.translation = [x,1,y];
+            zombie.projection = mat4.create();
+            this.zombies.addChild(zombie);
+        }
+        
+
         this.root = new Node();
 
         this.camera = new Node();
