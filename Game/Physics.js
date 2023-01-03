@@ -2,9 +2,10 @@ import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
 
 export class Physics {
 
-    constructor(scene, controller) {
+    constructor(scene, controller, zombies) {
         this.scene = scene;
         this.controller = controller;
+        this.zombies = zombies;
     }
 
     update(dt) {
@@ -17,7 +18,12 @@ export class Physics {
         // After moving, check for collision with every other node.
         this.scene.traverse(other => {
             if (node !== other && other.mesh && other.extras.colider) {
-                this.resolveCollision(this.controller, other);
+                this.resolveCollision(this.controller.node, other, this.getTransformedAABBForFirstPersonController(this.controller), this.getTransformedAABB(other));
+                for(let i = 0; i < this.zombies.length; i++) {
+                    //console.log(this.zombies[i]);
+                    this.resolveCollision(this.zombies[i].zombie_scene.nodes[0], other, this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]), this.getTransformedAABB(other));
+                    //this.resolveCollision(this.controller.node, this.zombies[i].zombie_scene.nodes[0], this.getTransformedAABBForFirstPersonController(this.controller), this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]));
+                }
             }
         });
     }
@@ -80,10 +86,10 @@ export class Physics {
         return { min: newmin, max: newmax };
     }
 
-    resolveCollision(a, b) {
+    resolveCollision(a, b, aBox, bBox) {
         // Get global space AABBs.
-        const aBox = this.getTransformedAABBForFirstPersonController(a);
-        const bBox = this.getTransformedAABB(b);
+        //const aBox = this.getTransformedAABB(a);
+        //const bBox = this.getTransformedAABB(b);
         // Check if there is collision.
         const isColliding = this.aabbIntersection(aBox, bBox);
         if (!isColliding) {
@@ -123,7 +129,7 @@ export class Physics {
 
         //vec3.add(a.translation, a.translation, minDirection);
         //a.updateMatrix();
-        a.node.translation = vec3.add(vec3.create(), a.node.translation, minDirection);
+        a.translation = vec3.add(vec3.create(), a.translation, minDirection);
     }
 
 }

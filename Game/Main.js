@@ -80,11 +80,10 @@ class App extends Application {
         //console.log(this.scene);
 
 
-        this.physics = new Physics(this.scene, this.controller);
+        this.physics = new Physics(this.scene, this.controller, this.zombies);
 
         this.renderer = new Renderer(this.gl);
         this.renderer.prepareScene(this.scene);
-
 
         //this.renderer.prepareScene(this.zombies.zombies_array[0]);
         //this.renderer.prepareScene(this.scene_zombie);
