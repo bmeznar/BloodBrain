@@ -34,6 +34,7 @@ class App extends Application {
 
         console.log(this.zombies);
 
+
         this.root = new Node();
 
         this.camera = new Node();
@@ -44,13 +45,13 @@ class App extends Application {
         //FIRST PERSON CONTROLLER
         this.controller = new FirstPersonController(this.camera, this.canvas);
         
-        this.shadowCamera = new Node();
+        /*this.shadowCamera = new Node();
         this.shadowCamera.projection = mat4.create();
         mat4.perspective(this.shadowCamera.projection, 0.5, 1, 15, 50);
         this.shadowCamera.translation = [0, 0, 20];
         this.shadowCamera.aspect = 0.3;
         this.shadowCamera.near = 15;
-        this.shadowCamera.far = 50;
+        this.shadowCamera.far = 50;*/
 
         this.scene = await this.loader.loadScene(this.loader.defaultScene);
 
@@ -109,6 +110,7 @@ class App extends Application {
 
         this.controller.update(dt);
         this.physics.update(dt);
+        this.zombies.update();
     }
 
 }
@@ -120,4 +122,4 @@ document.querySelector('.loader-container').remove();
 
 const gui = new GUI();
 gui.add(app.controller, 'pointerSensitivity', 0.0001, 0.01);
-gui.add(app.controller, 'maxSpeed', 0, 10);
+//gui.add(app.controller, 'maxSpeed', 0, 10);

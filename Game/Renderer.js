@@ -203,7 +203,7 @@ export class Renderer {
         //console.log(scene);
         //console.log(camera);
         //mat4.mul(mvpMatrix, mvpMatrix, scene.globalMatrix);
-
+        
 
         //const mvpMatrix = this.getViewProjectionMatrix(camera);
         for (const node of scene.nodes) {

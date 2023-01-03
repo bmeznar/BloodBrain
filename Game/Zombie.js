@@ -15,4 +15,8 @@ export class Zombie {
             this.zombies.addChild(zombie);
         }
     }
+
+    update(){
+        //spreminjanje koordinat zombijev
+    }
 }
