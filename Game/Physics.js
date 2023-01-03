@@ -26,7 +26,6 @@ export class Physics {
                 for(let i = 0; i < this.zombies.length; i++) {
                     //console.log(this.zombies[i]);
                     this.resolveCollision(this.zombies[i], other, this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]), this.getTransformedAABB(other), true);
-                    //this.resolveCollision(this.controller.node, this.zombies[i].zombie_scene.nodes[0], this.getTransformedAABBForFirstPersonController(this.controller), this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]), false);
                 }
             }
         });
