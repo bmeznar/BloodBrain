@@ -21,6 +21,9 @@ class App extends Application {
         this.loader = new GLTFLoader();
         await this.loader.load('../Assets/map/lab_map.gltf');
 
+        //this.loader_zombie = new GLTFLoader();
+        //await this.loader_zombie.load('../Assets/zombie/zombie_v2.gltf');
+
         //FIRST PERSON CONTROLLER
         const gl = this.gl;
 
@@ -30,9 +33,14 @@ class App extends Application {
         this.startTime = this.time;
 
         //generating zombies
-        this.zombies = new Zombie();
+        //this.zombies = new Zombie();
+        this.zombies = new Array();
 
-        console.log(this.zombies);
+        for(let i = 0; i < 20; i++){
+            this.zombie = new Zombie();
+            this.zombies[i] = this.zombie;
+        }
+        //console.log(this.zombies);
 
 
         this.root = new Node();
@@ -52,8 +60,11 @@ class App extends Application {
         this.shadowCamera.aspect = 0.3;
         this.shadowCamera.near = 15;
         this.shadowCamera.far = 50;*/
+        //console.log(this.loader);
 
         this.scene = await this.loader.loadScene(this.loader.defaultScene);
+        //console.log(this.scene);
+        //for(let i = 0; i < this.zombies.)
 
         //this.camera = await this.loader.loadNode('Camera');
         //console.log(this.camera);
@@ -62,10 +73,22 @@ class App extends Application {
             throw new Error('Scene or Camera not present in glTF');
         }
 
+        let index = this.scene.nodes.length;
+        for(let i = 0; i < this.zombies.length; i++){
+            this.scene.nodes[index+i] = this.zombies[i].zombie_scene.nodes[0];
+        }
+        //console.log(this.scene);
+
+
         this.physics = new Physics(this.scene, this.controller);
 
         this.renderer = new Renderer(this.gl);
         this.renderer.prepareScene(this.scene);
+
+
+        //this.renderer.prepareScene(this.zombies.zombies_array[0]);
+        //this.renderer.prepareScene(this.scene_zombie);
+
         //this.renderer.prepareScene(this.scene_gun);
         this.resize();
     }
@@ -110,7 +133,10 @@ class App extends Application {
 
         this.controller.update(dt);
         this.physics.update(dt);
-        this.zombies.update();
+        
+        for(let i = 0; i < this.zombies.length; i++){
+            this.zombies[i].update();
+        }
     }
 
 }
