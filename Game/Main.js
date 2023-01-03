@@ -36,7 +36,7 @@ class App extends Application {
         //this.zombies = new Zombie();
         this.zombies = new Array();
 
-        for(let i = 0; i < 20; i++){
+        for(let i = 0; i < 10; i++){
             this.zombie = new Zombie();
             this.zombies[i] = this.zombie;
         }
