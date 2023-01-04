@@ -143,6 +143,14 @@ class App extends Application {
         for(let i = 0; i < this.zombies.length; i++){
             this.zombies[i].update();
         }
+
+        for(let i = 0; i < this.controller.bullets.length; i++){
+            this.controller.bullets[i].update();
+            if (this.controller.bullets[i].despawn) {
+                //console.log("removed");
+                this.controller.bullets.splice(i, 1);
+            }
+        }
         
         this.gun.update(this.camera, this.controller.yaw);
     }

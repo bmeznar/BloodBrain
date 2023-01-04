@@ -2,6 +2,7 @@ import { quat, vec3, mat4 } from '../lib/gl-matrix-module.js';
 
 import { Utils } from './Utils.js';
 import { Node } from './Node.js';
+import { Bullet } from './Bullet.js';
 
 export class FirstPersonController extends Node {
 
@@ -58,7 +59,7 @@ export class FirstPersonController extends Node {
         this.jump_now = 0;
         this.jump_phase = 0;
 
-        this.bullets = new Node();
+        this.bullets = new Array(); 
 
         this.initHandlers();
     }
@@ -76,7 +77,7 @@ export class FirstPersonController extends Node {
         
 
         element.addEventListener('click', event => {
-            if(event.button == 0){
+            if(event.button == 0 && doc.pointerLockElement === element){
                 this.shoot()
             }
         });
@@ -205,8 +206,12 @@ export class FirstPersonController extends Node {
         const bullet_location = this.node.translation;
         Object.assign(bullet_location, {yaw: this.yaw});
         Object.assign(bullet_location, {pitch: this.pitch});
+
+        const bullet = new Bullet(this.node.translation, this.yaw, this.pitch);
+        this.bullets.push(bullet);
+        console.log(this.bullets);
         
-        this.bullets.addChild(this.node.translation, this.yaw, this.pitch);
+        //this.bullets.addChild(this.node.translation, this.yaw, this.pitch);
         //console.log(bullet_location);
     }
 
