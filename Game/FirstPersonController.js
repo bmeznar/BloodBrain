@@ -180,6 +180,14 @@ export class FirstPersonController extends Node {
             this.node.translation = new_position;
         }
 
+        let x_coordinate = (this.node.translation[0]+48)*400 / 88;
+        let y_coordinate = (this.node.translation[2]+48)*350 / 89;
+        let x = x_coordinate + "px";
+        let y = y_coordinate + "px";
+        let map = document.getElementById('dot');
+        map.style.left = x;
+        map.style.top = y;
+
         //jump translation
         if(this.jump == true){
             this.jump_now =  Date.now()+1;

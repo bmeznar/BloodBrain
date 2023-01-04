@@ -65,3 +65,38 @@ a.back:hover {
     0% { transform: rotate(0deg); }
   100% { transform: rotate(1800deg); }
 }
+
+#overlay {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: monospace;
+    padding: 0.5em;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  #map {
+    height: 350px;
+    width: 400px;
+    background-image: url("../Assets/map.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+
+  #dot {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    height: 8px;
+    width: 8px;
+    border: 2px solid black;
+    background-color: rgb(221, 38, 38);
+    border-radius: 50%;
+    display: inline-block;
+  }
