@@ -2,6 +2,7 @@ import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
 import { Node } from '../../common/engine/Node.js';
 import { GLTFLoader } from './GLTFLoader.js';
 import { Renderer } from './Renderer.js';
+import {rotateZ, rotateX, rotateY} from './quat.js';
 
 export class Zombie {
     constructor() {
@@ -40,10 +41,18 @@ export class Zombie {
 
 
     update(){
-        //let rotation = this.zombie_scene.nodes[0].rotation[1] + 0.001;
-        //this.zombie_scene.nodes[0].rotation = [0,1,0,0];
+        //let rotation = this.zombie_scene.nodes[0].rotation[1] + 0.01;
+        //this.zombie_scene.nodes[0].rotation = [0,rotation,0,0];
         //this.zombie_scene.nodes[0].scale = [1,1,1];
         //console.log(this.zombie_scene);
+        let out = this.zombie_scene.nodes[0].rotation;
+        let in_m = this.zombie_scene.nodes[0].rotation;
+        let rad  = 0.1;
+
+        rotateY(out, in_m, rad);
+
+        this.zombie_scene.nodes[0].rotation = out;
+
         this.moveZombie = false;
         this.delayer++;
         if (this.delayer >= 300) {
