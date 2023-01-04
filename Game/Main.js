@@ -144,7 +144,7 @@ class App extends Application {
             this.zombies[i].update();
         }
         
-        this.gun.update(this.camera);
+        this.gun.update(this.camera, this.controller.yaw);
     }
 
 }
