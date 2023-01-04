@@ -14,6 +14,7 @@ import { Zombie } from './Zombie.js';
 
 import { shaders } from './shaders.js';
 import { Camera } from './Camera.js';
+import { Gun } from './Gun.js';
 
 class App extends Application {
 
@@ -41,7 +42,8 @@ class App extends Application {
             this.zombies[i] = this.zombie;
         }
         //console.log(this.zombies);
-
+        this.gun = new Gun();
+        //console.log(this.gun);
 
         this.root = new Node();
 
@@ -73,11 +75,16 @@ class App extends Application {
             throw new Error('Scene or Camera not present in glTF');
         }
 
+        //adding zombie nodes
         let index = this.scene.nodes.length;
         for(let i = 0; i < this.zombies.length; i++){
             this.scene.nodes[index+i] = this.zombies[i].zombie_scene.nodes[0];
         }
-        //console.log(this.scene);
+        //adding gun nodes
+        index = this.scene.nodes.length;
+        for(let i = 0; i < this.gun.gun_scene.nodes.length; i++){
+            this.scene.nodes[index+i] = this.gun.gun_scene.nodes[i];
+        }
 
 
         this.physics = new Physics(this.scene, this.controller, this.zombies);
@@ -136,6 +143,8 @@ class App extends Application {
         for(let i = 0; i < this.zombies.length; i++){
             this.zombies[i].update();
         }
+        
+        this.gun.update(this.camera.translation);
     }
 
 }

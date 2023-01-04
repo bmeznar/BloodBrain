@@ -23,6 +23,7 @@ export class Zombie {
         let x = (Math.random() * 80) - 40;
         let y = (Math.random() * 80) - 40;
         this.zombie_scene.nodes[0].translation = [x, 0, y];
+        //console.log(this.zombie_scene);
         //console.log(x+" "+y);
         //this.zombies_array[i] = (test.nodes[0]);
 
@@ -39,6 +40,10 @@ export class Zombie {
 
 
     update(){
+        //let rotation = this.zombie_scene.nodes[0].rotation[1] + 0.001;
+        //this.zombie_scene.nodes[0].rotation = [0,1,0,0];
+        //this.zombie_scene.nodes[0].scale = [1,1,1];
+        //console.log(this.zombie_scene);
         this.moveZombie = false;
         this.delayer++;
         if (this.delayer >= 300) {
