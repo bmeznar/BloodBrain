@@ -182,7 +182,7 @@ export class FirstPersonController extends Node {
             this.node.translation = new_position;
         }
 
-        let x_coordinate = (this.node.translation[0]+48)*400 / 88;
+        let x_coordinate = (this.node.translation[0]+48)*435 / 95;
         let y_coordinate = (this.node.translation[2]+48)*350 / 89;
         let x = x_coordinate + "px";
         let y = y_coordinate + "px";
