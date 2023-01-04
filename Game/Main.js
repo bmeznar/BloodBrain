@@ -53,7 +53,7 @@ class App extends Application {
         this.root.addChild(this.camera);
 
         //FIRST PERSON CONTROLLER
-        this.controller = new FirstPersonController(this.camera, this.canvas);
+        //this.controller = new FirstPersonController(this.camera, this.canvas, this.scene);
         
         /*this.shadowCamera = new Node();
         this.shadowCamera.projection = mat4.create();
@@ -74,6 +74,9 @@ class App extends Application {
         if (!this.scene || !this.camera) {
             throw new Error('Scene or Camera not present in glTF');
         }
+
+        //FIRST PERSON CONTROLLER
+        this.controller = new FirstPersonController(this.camera, this.canvas);
 
         //adding zombie nodes
         let index = this.scene.nodes.length;
@@ -145,6 +148,16 @@ class App extends Application {
         }
 
         for(let i = 0; i < this.controller.bullets.length; i++){
+            let index = this.scene.nodes.length;
+            //console.log(this.scene.nodes);
+            //console.log(this.controller.bullets[i].bullet_scene);
+            if (this.controller.bullets[i].bullet_scene) {
+                this.scene.nodes[index+i] = this.controller.bullets[i].bullet_scene.nodes[0];
+                this.renderer.prepareScene(this.scene);
+            }
+            //this.scene.nodes[index+i] = this.controller.bullets[i].bullet_scene.nodes[0];
+            //this.renderer.prepareScene(this.scene);
+
             this.controller.bullets[i].update();
             if (this.controller.bullets[i].despawn) {
                 //console.log("removed");

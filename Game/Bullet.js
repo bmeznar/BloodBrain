@@ -17,8 +17,11 @@ export class Bullet {
 
     async spawn_bullet(){
         this.bullet_loader = new GLTFLoader();
-        await this.bullet_loader.load('../Assets/zombie/zombie_v2.gltf');
+        await this.bullet_loader.load('../Assets/bullet/bullet.gltf');
         this.bullet_scene = await this.bullet_loader.loadScene(this.bullet_loader.defaultScene);
+        //console.log(this.bullet_scene);
+
+        this.bullet_scene.nodes[0].translation = [this.position[0], this.position[1], this.position[2]];
     }
 
     update(){

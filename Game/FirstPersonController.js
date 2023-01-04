@@ -61,6 +61,8 @@ export class FirstPersonController extends Node {
 
         this.bullets = new Array(); 
 
+        this.timer = Math.floor(Date.now() / 1000);
+
         this.initHandlers();
     }
 
@@ -77,7 +79,8 @@ export class FirstPersonController extends Node {
         
 
         element.addEventListener('click', event => {
-            if(event.button == 0 && doc.pointerLockElement === element){
+            if(event.button == 0 && doc.pointerLockElement === element && this.timer + 5 <= Math.floor(Date.now() / 1000)){
+                this.timer = Math.floor(Date.now() / 1000);
                 this.shoot()
             }
         });
@@ -203,13 +206,16 @@ export class FirstPersonController extends Node {
 
     shoot(){
         //console.log("shoot");
-        const bullet_location = this.node.translation;
-        Object.assign(bullet_location, {yaw: this.yaw});
-        Object.assign(bullet_location, {pitch: this.pitch});
-
         const bullet = new Bullet(this.node.translation, this.yaw, this.pitch);
+
+        //const bullet_location = this.node.translation;
+        Object.assign(bullet, {yaw: this.yaw});
+        Object.assign(bullet, {pitch: this.pitch});
+
+        //const bullet = new Bullet(this.node.translation, this.yaw, this.pitch);
         this.bullets.push(bullet);
-        console.log(this.bullets);
+
+        //console.log(this.bullets);
         
         //this.bullets.addChild(this.node.translation, this.yaw, this.pitch);
         //console.log(bullet_location);
