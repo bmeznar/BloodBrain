@@ -27,15 +27,13 @@ export class Gun {
 
         rotateZ(out, camera.rotation, 1.57);
         rotateY(out, out, 3.14);
-        let x = 0.2 * Math.sin(Math.PI * 2 * angle / 360) + camera.translation[0];
-        let y = 0.2 * Math.cos(Math.PI * 2 * angle / 360) + camera.translation[2];
-        let z = camera.translation[1]-0.15;
+        let x = 0.3 * Math.sin(Math.PI * 2 * angle / 360) + camera.translation[0];
+        let y = 0.3 * Math.cos(Math.PI * 2 * angle / 360) + camera.translation[2];
+        let z = camera.translation[1]-0.05;
         //let coordinates = 
 
         //this.gun_scene.nodes[2].rotation = camera.rotation;
-        this.gun_scene.nodes[2].rotation = out;
-        this.gun_scene.nodes[2].translation = [x, z, y];
-        this.gun_scene.nodes[2].scale = [0.1, 0.1, 0.1];
-        console.log(this.gun_scene);
+        this.gun_scene.nodes[1].rotation = out;
+        this.gun_scene.nodes[1].translation = [x, z, y];
     }
 }
