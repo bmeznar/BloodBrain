@@ -7,6 +7,9 @@ import {rotateZ, rotateX, rotateY} from './quat.js';
 export class Zombie {
     constructor() {
         this.make_zombie();
+
+        this.prevRandInt;
+        this.prevRotation;
     }
 
     async make_zombie(){
@@ -45,13 +48,13 @@ export class Zombie {
         //this.zombie_scene.nodes[0].rotation = [0,rotation,0,0];
         //this.zombie_scene.nodes[0].scale = [1,1,1];
         //console.log(this.zombie_scene);
-        let out = this.zombie_scene.nodes[0].rotation;
-        let in_m = this.zombie_scene.nodes[0].rotation;
-        let rad  = 0.1;
+        const out = this.zombie_scene.nodes[0].rotation;
+        const in_m = this.zombie_scene.nodes[0].rotation;
+        let rad = 0;
 
-        rotateY(out, in_m, rad);
+        //rotateY(out, in_m, rad);
 
-        this.zombie_scene.nodes[0].rotation = out;
+        //this.zombie_scene.nodes[0].rotation = out;
 
         this.moveZombie = false;
         this.delayer++;
@@ -68,24 +71,108 @@ export class Zombie {
                 case(1):
                     this.moveX = 0.017;
                     this.moveY = 0;
+                    if (this.prevRandInt != rndInt) {
+                        switch(this.prevRotation) {
+                            case(1):
+                                rad = 0;
+                                break;
+                            case(2):
+                                rad = Math.PI;
+                                break;
+                            case(3):
+                                rad = Math.PI / 2;
+                                break;
+                            case(4):
+                                rad = 3 * (Math.PI / 2);
+                                break;
+                            default:
+                                rad = Math.PI / 2;
+                        }
+                    }
+                    this.prevRandInt = rndInt;
+                    this.prevRotation = 1;
                     break;
                 case(2):
                     this.moveX = -0.017;
                     this.moveY = 0;
+                    if (this.prevRandInt != rndInt) {
+                        switch(this.prevRotation) {
+                            case(1):
+                                rad = Math.PI;
+                                break;
+                            case(2):
+                                rad = 0;
+                                break;
+                            case(3):
+                                rad = 3 * (Math.PI / 2);
+                                break;
+                            case(4):
+                                rad = Math.PI / 2;
+                                break;
+                            default:
+                                rad = 3 * (Math.PI / 2);
+                        }
+                    }
+                    this.prevRandInt = rndInt;
+                    this.prevRotation = 2;
                     break;
                 case(3):
                     this.moveX = 0;
                     this.moveY = 0.017;
+                    if (this.prevRandInt != rndInt) {
+                        switch(this.prevRotation) {
+                            case(1):
+                                rad = 3 * (Math.PI / 2);
+                                break;
+                            case(2):
+                                rad = Math.PI / 2;
+                                break;
+                            case(3):
+                                rad = 0;
+                                break;
+                            case(4):
+                                rad = Math.PI;
+                                break;
+                            default:
+                                rad = 0;
+                        }
+                    }
+                    this.prevRandInt = rndInt;
+                    this.prevRotation = 3;
                     break;
                 case(4):
                     this.moveX = 0;
                     this.moveY = -0.017;
+                    if (this.prevRandInt != rndInt) {
+                        switch(this.prevRotation) {
+                            case(1):
+                                rad = Math.PI / 2;
+                                break;
+                            case(2):
+                                rad = 3 * (Math.PI / 2);
+                                break;
+                            case(3):
+                                rad = Math.PI;
+                                break;
+                            case(4):
+                                rad = 0;
+                                break;
+                            default:
+                                rad = Math.PI;
+                        }
+                    }
+                    this.prevRandInt = rndInt;
+                    this.prevRotation = 4;
                     break;
                 case(5):
                     this.moveX = 0;
                     this.moveY = 0;
             }
         }
+
+        rotateY(out, in_m, rad);
+
+        this.zombie_scene.nodes[0].rotation = out;
 
         const x = this.zombie_scene.nodes[0].translation[0] + this.moveX;
         const y = this.zombie_scene.nodes[0].translation[2] + this.moveY;

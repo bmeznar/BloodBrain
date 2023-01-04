@@ -82,6 +82,8 @@ export class FirstPersonController extends Node {
             if(event.button == 0 && doc.pointerLockElement === element && this.timer + 5 <= Math.floor(Date.now() / 1000)){
                 this.timer = Math.floor(Date.now() / 1000);
                 this.shoot()
+            } else {
+                console.log("Cant shoot");
             }
         });
 
