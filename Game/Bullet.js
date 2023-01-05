@@ -59,6 +59,15 @@ export class Bullet {
             this.bullet_scene.nodes[0].translation, this.velocity, dt);
             //const x = this.bullet_scene.nodes[0].translation[0] + 0.1;
             //const y = this.bullet_scene.nodes[0].translation[2];
+            
+            let x1 = this.bullet_scene.nodes[0].translation[0];
+            let y1 = this.bullet_scene.nodes[0].translation[2]; 
+            let x2 = new_position[0];
+            let y2 = new_position[2];
+            let razdalja = Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2))
+            let z = new_position[1] + Math.tan(this.pitch) * razdalja;
+            console.log(z);
+            new_position[1] = z;
 
             this.bullet_scene.nodes[0].translation = new_position;
         }
