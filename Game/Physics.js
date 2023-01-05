@@ -16,16 +16,28 @@ export class Physics {
         //node.updateMatrix();
 
         for(let i = 0; i < this.zombies.length; i++) {
-            this.resolveCollision(this.controller.node, this.zombies[i].zombie_scene.nodes[0], this.getTransformedAABBForFirstPersonController(this.controller), this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]), false);
+            this.resolveCollision(this.controller.node, this.zombies[i].zombie_scene.nodes[0], this.getTransformedAABBForFirstPersonController(this.controller), this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]), false, false);
+            for(let i = 0; i < this.controller.bullets.length; i++) {
+                if (this.controller.bullets[i].bullet_scene) {
+                    //console.log(this.controller.bullets[i]);
+                    this.resolveCollisionZombieBullet(this.controller.bullets[i], this.zombies[i], this.getTransformedAABB(this.controller.bullets[i].bullet_scene.nodes[0]), this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]));
+                }
+            }
         }
 
         // After moving, check for collision with every other node.
         this.scene.traverse(other => {
             if (node !== other && other.mesh && other.extras.colider) {
-                this.resolveCollision(this.controller.node, other, this.getTransformedAABBForFirstPersonController(this.controller), this.getTransformedAABB(other), false);
+                this.resolveCollision(this.controller.node, other, this.getTransformedAABBForFirstPersonController(this.controller), this.getTransformedAABB(other), false, false);
                 for(let i = 0; i < this.zombies.length; i++) {
                     //console.log(this.zombies[i]);
-                    this.resolveCollision(this.zombies[i], other, this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]), this.getTransformedAABB(other), true);
+                    this.resolveCollision(this.zombies[i], other, this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]), this.getTransformedAABB(other), true, false);
+                }
+                for(let i = 0; i < this.controller.bullets.length; i++) {
+                    if (this.controller.bullets[i].bullet_scene) {
+                        //console.log(this.controller.bullets[i]);
+                        this.resolveCollision(this.controller.bullets[i], other, this.getTransformedAABB(this.controller.bullets[i].bullet_scene.nodes[0]), this.getTransformedAABB(other), false, true);
+                    }
                 }
             }
         });
@@ -89,7 +101,7 @@ export class Physics {
         return { min: newmin, max: newmax };
     }
 
-    resolveCollision(a, b, aBox, bBox, isZombie) {
+    resolveCollision(a, b, aBox, bBox, isZombie, isBullet) {
         // Get global space AABBs.
         //const aBox = this.getTransformedAABB(a);
         //const bBox = this.getTransformedAABB(b);
@@ -138,10 +150,31 @@ export class Physics {
             a.moveX = -a.moveX;
             a.moveY = -a.moveY;
             //a.translation = vec3.add(vec3.create(), a.zombie_scene.nodes[0].translation, minDirection);
-        } else {
+        } else if(!isBullet) {
             a.translation = vec3.add(vec3.create(), a.translation, minDirection);
+        } else {
+            a.despawn = true;
         }
         
+    }
+
+    resolveCollisionZombieBullet(a, b, aBox, bBox) {
+        // Get global space AABBs.
+        //const aBox = this.getTransformedAABB(a);
+        //const bBox = this.getTransformedAABB(b);
+        // Check if there is collision.
+
+        const isColliding = this.aabbIntersection(aBox, bBox);
+        if (!isColliding) {
+            return;
+        }
+
+        a.despawn = true;
+        b.take_damage();
+        console.log(b.health);
+
+        //vec3.add(a.translation, a.translation, minDirection);
+        //a.updateMatrix();    
     }
 
 }
