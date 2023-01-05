@@ -169,6 +169,8 @@ export class Zombie {
                     this.moveY = 0;
             }
         }
+        
+
 
         rotateY(out, in_m, rad);
 
@@ -178,5 +180,17 @@ export class Zombie {
         const y = this.zombie_scene.nodes[0].translation[2] + this.moveY;
 
         this.zombie_scene.nodes[0].translation = [x, 0, y];
+    } 
+    
+    check_attack(player_coordinates){
+        let zombie_x = this.zombie_scene.nodes[0].translation[0];
+        let zombie_y = this.zombie_scene.nodes[0].translation[2];
+        let player_x = player_coordinates[0];
+        let player_y = player_coordinates[2];
+        let distance = Math.sqrt(Math.pow((zombie_x - player_x),2) + Math.pow((zombie_y - player_y),2));
+        if(distance < 1){
+            return true;
+        }
+        return false;
     }
 }

@@ -143,8 +143,12 @@ class App extends Application {
         this.controller.update(dt);
         this.physics.update(dt);
         
+        let time = new Date();
         for(let i = 0; i < this.zombies.length; i++){
             this.zombies[i].update();
+            if(this.zombies[i].check_attack(this.camera.translation)){
+                this.controller.take_damage(time);
+            };
         }
 
         for(let i = 0; i < this.controller.bullets.length; i++){
