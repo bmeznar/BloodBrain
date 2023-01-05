@@ -39,11 +39,16 @@ export class Zombie {
             //console.log(x+" "+y);
             this.zombies_array[i] = (test.nodes[0]);
         }*/
+        this.health = 100;
 
     }
 
 
     update(){
+        if(this.health <= 0){
+            this.zombie_scene.nodes[0].translation = [0,-10,0];
+            return;
+        }
         //let rotation = this.zombie_scene.nodes[0].rotation[1] + 0.01;
         //this.zombie_scene.nodes[0].rotation = [0,rotation,0,0];
         //this.zombie_scene.nodes[0].scale = [1,1,1];
@@ -188,9 +193,13 @@ export class Zombie {
         let player_x = player_coordinates[0];
         let player_y = player_coordinates[2];
         let distance = Math.sqrt(Math.pow((zombie_x - player_x),2) + Math.pow((zombie_y - player_y),2));
-        if(distance < 1){
+        if(distance < 1.5){
             return true;
         }
         return false;
+    }
+
+    take_damage(){
+        this.health -= 50;
     }
 }
