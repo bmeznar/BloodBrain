@@ -182,8 +182,28 @@ export class FirstPersonController extends Node {
             this.node.translation = new_position;
         }
 
-        let x_coordinate = (this.node.translation[0]+48)*435 / 95;
-        let y_coordinate = (this.node.translation[2]+48)*350 / 89;
+        let x_coordinate = 0;
+        if(this.node.translation[0] < -33){
+            x_coordinate = 10;
+        }
+        else if(this.node.translation[0] > 33){
+            x_coordinate = 310;
+        }
+        else{
+            x_coordinate = (this.node.translation[0]+34) * 4.4;
+        }
+
+        let y_coordinate = 0;
+        if(this.node.translation[2] < -19){
+            y_coordinate = 10;
+        }
+        else if(this.node.translation[2] > 19){
+            y_coordinate = 210;
+        }
+        else{
+            y_coordinate = (this.node.translation[2]+22) * 4.8;
+        }
+        
         let x = x_coordinate + "px";
         let y = y_coordinate + "px";
         let map = document.getElementById('dot');

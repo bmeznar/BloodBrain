@@ -80,9 +80,9 @@ a.back:hover {
   }
 
   #map {
-    height: 350px;
-    width: 400px;
-    background-image: url("../Assets/map.png");
+    height: 200px;
+    width: 300px;
+    background-image: url("../Assets/map_2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -100,3 +100,22 @@ a.back:hover {
     border-radius: 50%;
     display: inline-block;
   }
+
+  #crosshair {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 50%;
+    top: 50%;
+    color: white;
+    font-family: monospace;
+    padding: 0.5em;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 20px;
+    background-image: url("../Assets/crosshair.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
