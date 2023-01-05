@@ -66,6 +66,8 @@ export class FirstPersonController extends Node {
         this.initHandlers();
         this.bullets_left = 50;
         this.health = 100;
+
+        this.gunAudio = new Audio('../Assets/sound/gunshotSound.wav');
     }
 
     initHandlers() {
@@ -243,7 +245,9 @@ export class FirstPersonController extends Node {
     shoot(){
         //console.log("shoot");
         if(this.bullets_left){
-            const bullet = new Bullet(this.node.translation, this.yaw, this.pitch);
+            this.gunAudio.play();
+
+            const bullet = new Bullet(this.node.translation, this.yaw, this.pitch, this.node.rotation);
 
             //const bullet_location = this.node.translation;
             Object.assign(bullet, {yaw: this.yaw});
