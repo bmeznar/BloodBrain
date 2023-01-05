@@ -68,6 +68,9 @@ export class FirstPersonController extends Node {
         this.health = 100;
 
         this.gunAudio = new Audio('../Assets/sound/gunshotSound.wav');
+        this.punchAudio = new Audio('../Assets/sound/punch.mp3');
+        
+        this.last_taken_damage = 0;
     }
 
     initHandlers() {
@@ -300,6 +303,33 @@ export class FirstPersonController extends Node {
 
     keyupHandler(e) {
         this.keys[e.code] = false;
+    }
+
+    take_damage(time, gamemode){
+        let razlika = time - this.last_taken_damage;
+        //console.log(razlika);
+        if(razlika > 1000){
+            switch(gamemode){
+                case "easy":
+                    this.health -= 10;
+                    break;
+                case "medium":
+                    this.health -= 15;
+                    break;
+                case "hard":
+                    this.health -= 20;
+                    break;
+                default:
+                    console.log("error with gamemode selection");
+            }
+            //document.getElementById("ekran").style.border = "20px solid #f00";
+            this.punchAudio.play();
+            if(this.health <= 0){
+                //console.log("DEAD");
+                window.location.href = "./dead.html";
+            }
+            this.last_taken_damage = time;
+        }
     }
 
 }

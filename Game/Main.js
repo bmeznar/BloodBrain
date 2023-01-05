@@ -89,6 +89,7 @@ class App extends Application {
             this.scene.nodes[index+i] = this.gun.gun_scene.nodes[i];
         }
 
+        this.gamemode = "easy";
 
         this.physics = new Physics(this.scene, this.controller, this.zombies);
 
@@ -147,8 +148,12 @@ class App extends Application {
         for(let i = 0; i < this.zombies.length; i++){
             this.zombies[i].update();
             if(this.zombies[i].check_attack(this.camera.translation)){
-                this.controller.take_damage(time);
-            };
+                this.controller.take_damage(time, this.gamemode);
+            }
+            else{
+                //console.log(document.getElementById("ekran"));
+                //document.getElementById("ekran").style.border = "none";
+            }
         }
 
         for(let i = 0; i < this.controller.bullets.length; i++){
