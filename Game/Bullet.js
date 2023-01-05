@@ -66,7 +66,6 @@ export class Bullet {
             let y2 = new_position[2];
             let razdalja = Math.sqrt(Math.pow((x1-x2),2) + Math.pow((y1-y2),2))
             let z = new_position[1] + Math.tan(this.pitch) * razdalja;
-            console.log(z);
             new_position[1] = z;
 
             this.bullet_scene.nodes[0].translation = new_position;
