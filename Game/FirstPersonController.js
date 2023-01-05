@@ -213,7 +213,8 @@ export class FirstPersonController extends Node {
         map.style.top = y;
 
         
-        document.getElementById("health_ammo").innerHTML = this.bullets_left + " " + this.health;
+        document.getElementById("bullets").innerHTML = this.bullets_left;
+        document.getElementById("health").innerHTML = this.health;
 
         //jump translation
         if(this.jump == true){

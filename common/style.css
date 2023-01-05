@@ -120,6 +120,7 @@ a.back:hover {
   }
 
   #health_ammo {
+    display: flex;
     position: absolute;
     right: 20px;
     bottom: 20px;
@@ -130,4 +131,27 @@ a.back:hover {
     font-size: 2rem;
     text-align: center;
     border-radius: 20px;
+  }
+
+  #health_ammo div{
+    flex-basis: 25%;
+  }
+
+  #bullet_img{    
+    height: 2rem;
+    width: 2rem;
+    background-image: url("../Assets/bullets_img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #health_img{
+    margin-left: 40px;
+    height: 2rem;
+    width: 4rem;
+    background-image: url("../Assets/hearth_img.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
