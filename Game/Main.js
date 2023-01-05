@@ -168,7 +168,7 @@ class App extends Application {
             //this.scene.nodes[index+i] = this.controller.bullets[i].bullet_scene.nodes[0];
             //this.renderer.prepareScene(this.scene);
 
-            this.controller.bullets[i].update();
+            this.controller.bullets[i].update(dt);
             if (this.controller.bullets[i].despawn) {
                 this.controller.bullets[i].bullet_scene.nodes[0].translation = [9999, 9999, 9999];
                 //console.log(this.controller.bullets[i].sceneIndex);

@@ -13,6 +13,9 @@ export class Bullet {
         this.initTime = Math.floor(Date.now() / 1000);
         this.despawn = false;
         this.sceneIndex = -1;
+        this.velocity = [0, 0, 0];
+        this.acceleration = 50;
+        this.maxSpeed = 10;
 
         this.spawn_bullet();
     }
@@ -23,7 +26,7 @@ export class Bullet {
         this.bullet_scene = await this.bullet_loader.loadScene(this.bullet_loader.defaultScene);
         //console.log(this.bullet_scene);
 
-        this.bullet_scene.nodes[0].translation = [this.position[0], this.position[1], this.position[2]];
+        this.bullet_scene.nodes[0].translation = [this.position[0], this.position[1] - 0.05, this.position[2]];
         //const rotation = quat.create();
         //rotateY(rotation, rotation, this.yaw);
         //rotateX(rotation, rotation, this.pitch);
@@ -36,16 +39,28 @@ export class Bullet {
         this.bullet_scene.nodes[0].rotation = this.rotation;
     }
 
-    update(){
+    update(dt){
         if (this.initTime + 5 <= Math.floor(Date.now() / 1000)) {
             this.despawn = true;
         }
 
         if (this.bullet_scene) {
+            const forward = vec3.set(vec3.create(), -Math.sin(this.yaw), 0, -Math.cos(this.yaw));
+            const acc = vec3.create();
+            vec3.add(acc, acc, forward);
+
+            vec3.scaleAndAdd(this.velocity, this.velocity, acc, dt * this.acceleration);
+
+            const speed = vec3.length(this.velocity);
+            if (speed > this.maxSpeed) {
+                vec3.scale(this.velocity, this.velocity, this.maxSpeed / speed);
+            }
+            let new_position = vec3.scaleAndAdd(vec3.create(),
+            this.bullet_scene.nodes[0].translation, this.velocity, dt);
             //const x = this.bullet_scene.nodes[0].translation[0] + 0.1;
             //const y = this.bullet_scene.nodes[0].translation[2];
 
-            //this.bullet_scene.nodes[0].translation = [x, 1, y];
+            this.bullet_scene.nodes[0].translation = new_position;
         }
     }
 }
