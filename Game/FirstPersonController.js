@@ -64,6 +64,8 @@ export class FirstPersonController extends Node {
         this.timer = Math.floor(Date.now() / 1000);
 
         this.initHandlers();
+        this.bullets_left = 50;
+        this.health = 100;
     }
 
     initHandlers() {
@@ -210,6 +212,9 @@ export class FirstPersonController extends Node {
         map.style.left = x;
         map.style.top = y;
 
+        
+        document.getElementById("health_ammo").innerHTML = this.bullets_left + " " + this.health;
+
         //jump translation
         if(this.jump == true){
             this.jump_now =  Date.now()+1;
@@ -236,16 +241,20 @@ export class FirstPersonController extends Node {
 
     shoot(){
         //console.log("shoot");
-        const bullet = new Bullet(this.node.translation, this.yaw, this.pitch);
+        if(this.bullets_left){}
+            const bullet = new Bullet(this.node.translation, this.yaw, this.pitch);
 
-        //const bullet_location = this.node.translation;
-        Object.assign(bullet, {yaw: this.yaw});
-        Object.assign(bullet, {pitch: this.pitch});
+            //const bullet_location = this.node.translation;
+            Object.assign(bullet, {yaw: this.yaw});
+            Object.assign(bullet, {pitch: this.pitch});
 
-        //const bullet = new Bullet(this.node.translation, this.yaw, this.pitch);
-        this.bullets.push(bullet);
+            //const bullet = new Bullet(this.node.translation, this.yaw, this.pitch);
+            this.bullets.push(bullet);
 
-        //console.log(this.bullets);
+            //console.log(this.bullets);
+            this.bullets_left--;
+        }   
+
         
         //this.bullets.addChild(this.node.translation, this.yaw, this.pitch);
         //console.log(bullet_location);
