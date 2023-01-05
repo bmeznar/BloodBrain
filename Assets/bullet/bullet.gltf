@@ -1,6 +1,6 @@
 {
     "asset" : {
-        "generator" : "Khronos glTF Blender I/O v3.4.49",
+        "generator" : "Khronos glTF Blender I/O v3.4.50",
         "version" : "2.0"
     },
     "scene" : 0,
@@ -17,9 +17,9 @@
             "mesh" : 0,
             "name" : "Cylinder",
             "scale" : [
-                0.10770153254270554,
-                0.10770153254270554,
-                0.10770153254270554
+                0.00923012476414442,
+                0.00923012476414442,
+                0.00923012476414442
             ],
             "translation" : [
                 0,
@@ -110,7 +110,7 @@
         {
             "bufferView" : 0,
             "componentType" : 5126,
-            "count" : 84,
+            "count" : 126,
             "max" : [
                 0.9749279022216797,
                 1.9199714660644531,
@@ -126,13 +126,13 @@
         {
             "bufferView" : 1,
             "componentType" : 5126,
-            "count" : 84,
+            "count" : 126,
             "type" : "VEC2"
         },
         {
             "bufferView" : 2,
             "componentType" : 5126,
-            "count" : 84,
+            "count" : 126,
             "type" : "VEC3"
         },
         {
@@ -144,7 +144,7 @@
         {
             "bufferView" : 4,
             "componentType" : 5126,
-            "count" : 127,
+            "count" : 186,
             "max" : [
                 0.9749279022216797,
                 0.9588072299957275,
@@ -160,13 +160,13 @@
         {
             "bufferView" : 5,
             "componentType" : 5126,
-            "count" : 127,
+            "count" : 186,
             "type" : "VEC2"
         },
         {
             "bufferView" : 6,
             "componentType" : 5126,
-            "count" : 127,
+            "count" : 186,
             "type" : "VEC3"
         },
         {
@@ -178,7 +178,7 @@
         {
             "bufferView" : 8,
             "componentType" : 5126,
-            "count" : 44,
+            "count" : 59,
             "max" : [
                 0.9749279022216797,
                 1.9199714660644531,
@@ -194,13 +194,13 @@
         {
             "bufferView" : 9,
             "componentType" : 5126,
-            "count" : 44,
+            "count" : 59,
             "type" : "VEC2"
         },
         {
             "bufferView" : 10,
             "componentType" : 5126,
-            "count" : 44,
+            "count" : 59,
             "type" : "VEC3"
         },
         {
@@ -213,80 +213,80 @@
     "bufferViews" : [
         {
             "buffer" : 0,
-            "byteLength" : 1008,
+            "byteLength" : 1512,
             "byteOffset" : 0,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 672,
-            "byteOffset" : 1008,
+            "byteLength" : 1008,
+            "byteOffset" : 1512,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 1008,
-            "byteOffset" : 1680,
+            "byteLength" : 1512,
+            "byteOffset" : 2520,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 252,
-            "byteOffset" : 2688,
+            "byteOffset" : 4032,
             "target" : 34963
         },
         {
             "buffer" : 0,
-            "byteLength" : 1524,
-            "byteOffset" : 2940,
+            "byteLength" : 2232,
+            "byteOffset" : 4284,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 1016,
-            "byteOffset" : 4464,
+            "byteLength" : 1488,
+            "byteOffset" : 6516,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 1524,
-            "byteOffset" : 5480,
+            "byteLength" : 2232,
+            "byteOffset" : 8004,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 450,
-            "byteOffset" : 7004,
+            "byteOffset" : 10236,
             "target" : 34963
         },
         {
             "buffer" : 0,
-            "byteLength" : 528,
-            "byteOffset" : 7456,
+            "byteLength" : 708,
+            "byteOffset" : 10688,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 352,
-            "byteOffset" : 7984,
+            "byteLength" : 472,
+            "byteOffset" : 11396,
             "target" : 34962
         },
         {
             "buffer" : 0,
-            "byteLength" : 528,
-            "byteOffset" : 8336,
+            "byteLength" : 708,
+            "byteOffset" : 11868,
             "target" : 34962
         },
         {
             "buffer" : 0,
             "byteLength" : 198,
-            "byteOffset" : 8864,
+            "byteOffset" : 12576,
             "target" : 34963
         }
     ],
     "buffers" : [
         {
-            "byteLength" : 9064,
+            "byteLength" : 12776,
             "uri" : "bullet.bin"
         }
     ]

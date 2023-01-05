@@ -1,4 +1,4 @@
-import { vec3, mat4 } from '../../lib/gl-matrix-module.js';
+import { quat, vec3, mat4 } from '../../lib/gl-matrix-module.js';
 import { Node } from '../../common/engine/Node.js';
 import { GLTFLoader } from './GLTFLoader.js';
 import { Renderer } from './Renderer.js';
@@ -11,6 +11,7 @@ export class Bullet {
         this.pitch = pitch;
         this.initTime = Math.floor(Date.now() / 1000);
         this.despawn = false;
+        this.sceneIndex = -1;
 
         this.spawn_bullet();
     }
@@ -27,6 +28,19 @@ export class Bullet {
     update(){
         if (this.initTime + 5 <= Math.floor(Date.now() / 1000)) {
             this.despawn = true;
+        }
+
+        if (this.bullet_scene) {
+            //console.log(this.bullet_scene);
+            const rotation = quat.create();
+            rotateY(rotation, rotation, this.yaw);
+            rotateX(rotation, rotation, this.pitch);
+            this.bullet_scene.nodes[0].rotation = rotation;
+
+            const x = this.bullet_scene.nodes[0].translation[0];
+            const y = this.bullet_scene.nodes[0].translation[2];
+
+            this.bullet_scene.nodes[0].translation = [x, 1, y];
         }
     }
 }
