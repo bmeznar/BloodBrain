@@ -241,7 +241,7 @@ export class FirstPersonController extends Node {
 
     shoot(){
         //console.log("shoot");
-        if(this.bullets_left){}
+        if(this.bullets_left){
             const bullet = new Bullet(this.node.translation, this.yaw, this.pitch);
 
             //const bullet_location = this.node.translation;
