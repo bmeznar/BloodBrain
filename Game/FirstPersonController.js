@@ -90,13 +90,15 @@ export class FirstPersonController extends Node {
         
 
         element.addEventListener('click', event => {
-            if(event.button == 0 && doc.pointerLockElement === element && this.timer + 5 <= Math.floor(Date.now() / 1000)){
+            if(event.button == 0 && doc.pointerLockElement === element && this.timer + 4.1 <= (Date.now() / 1000)){
                 this.timer = Math.floor(Date.now() / 1000);
-                this.shoot()
+                this.shoot();
+                console.log(this.node.translation);
             } else {
                 if (this.moving) {
                     this.dryfire.play();
                     console.log("Cant shoot");
+                    console.log(this.node.translation);
                 }
             }
         });
@@ -323,10 +325,10 @@ export class FirstPersonController extends Node {
                     this.health -= 10;
                     break;
                 case "medium":
-                    this.health -= 15;
+                    this.health -= 20;
                     break;
                 case "hard":
-                    this.health -= 20;
+                    this.health -= 50;
                     break;
                 default:
                     console.log("error with gamemode selection");

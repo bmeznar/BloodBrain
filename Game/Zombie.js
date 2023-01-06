@@ -5,8 +5,10 @@ import { Renderer } from './Renderer.js';
 import {rotateZ, rotateX, rotateY} from './quat.js';
 
 export class Zombie {
-    constructor(controller) {
+    constructor(controller, x, y) {
         this.controller = controller;
+        this.x = x;
+        this.y = y;
 
         this.make_zombie();
 
@@ -27,9 +29,9 @@ export class Zombie {
 
         //this.zombies_array = new Array();
         //let test = this.zombie_scene;
-        let x = (Math.random() * 80) - 40;
-        let y = (Math.random() * 80) - 40;
-        this.zombie_scene.nodes[0].translation = [x, 0, y];
+        //let x = (Math.random() * 80) - 40;
+        //let y = (Math.random() * 80) - 40;
+        this.zombie_scene.nodes[0].translation = [this.x, 0, this.y];
         //console.log(this.zombie_scene);
         //console.log(x+" "+y);
         //this.zombies_array[i] = (test.nodes[0]);
@@ -43,13 +45,18 @@ export class Zombie {
             this.zombies_array[i] = (test.nodes[0]);
         }*/
         this.health = 100;
-
+        this.despawned = false;
     }
 
 
     update(){
+        if (this.despawned) {
+            return;
+        }
+
         if(this.health <= 0){
-            this.zombie_scene.nodes[0].translation = [0,-10,0];
+            this.despawned = true;
+            this.zombie_scene.nodes[0].translation = [9999,-9999,9999];
             this.controller.kills += 1;
             return;
         }

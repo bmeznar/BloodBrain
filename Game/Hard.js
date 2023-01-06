@@ -53,7 +53,7 @@ class App extends Application {
         this.camera.projection = mat4.create();
         this.root.addChild(this.camera);
 
-        this.gamemode = "easy";
+        this.gameMode = "hard";
 
         //FIRST PERSON CONTROLLER
         //this.controller = new FirstPersonController(this.camera, this.canvas, this.scene);
@@ -76,9 +76,13 @@ class App extends Application {
         //FIRST PERSON CONTROLLER
         this.controller = new FirstPersonController(this.camera, this.canvas);
 
-        const positions = [[-20, -7], [-12.5, 1.3], [-5.8, 1.4], [8.1822, -8.53702], [23.248552, 6.727736]];
-        //console.log(positions);
-        for(let i = 0; i < 5; i++){
+        const positions = [[-20, -7], [-12.5, 1.3], [-5.8, 1.4], [8.1822, -8.53702], [23.248552, 6.727736],
+        [-8.0705, 12.979722], [10.88560, -8.60489], [15.72903, 12.5995], [25.4703769, 11.333123207], [14.66846466, 3.56893348],
+        [24.487329430, 0.1388195], [19.1937713, -1.6731138], [17.46026039123535, -10.275486946105957],
+        [25.605466842651367, -8.729140281677246], [20.439680099487305, -14.169455528259277], [14.979235649108887, -5.422432899475098],
+        [-8.73986530303955, 13.192118644714355], [-14.927111625671387, 6.287947654724121],
+        [-19.018274307250977, 12.627008438110352], [17.7182559967041, -11.624876022338867]];
+        for(let i = 0; i < 10; i++){
             this.zombie = new Zombie(this.controller, positions[i][0], positions[i][1]);
             this.zombies[i] = this.zombie;
         }
@@ -146,7 +150,7 @@ class App extends Application {
     }
 
     update() {
-        if (this.controller.kills >= 5) {
+        if (this.controller.kills >= 20) {
             //console.log(this.controller.kills);
             this.controller.kills = -999999;
             this.timeNode.nodeValue = ((performance.now() - this.gameTime) / 1000).toFixed(2) + "s";
@@ -164,7 +168,7 @@ class App extends Application {
         for(let i = 0; i < this.zombies.length; i++){
             this.zombies[i].update();
             if(this.zombies[i].check_attack(this.camera.translation)){
-                this.controller.take_damage(time, this.gamemode);
+                this.controller.take_damage(time, this.gameMode);
             }
             else{
                 //console.log(document.getElementById("ekran"));
