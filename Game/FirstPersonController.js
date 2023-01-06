@@ -74,6 +74,7 @@ export class FirstPersonController extends Node {
         this.last_taken_damage = 0;
 
         this.kills = 0;
+        this.moving = false;
     }
 
     initHandlers() {
@@ -93,8 +94,10 @@ export class FirstPersonController extends Node {
                 this.timer = Math.floor(Date.now() / 1000);
                 this.shoot()
             } else {
-                this.dryfire.play();
-                console.log("Cant shoot");
+                if (this.moving) {
+                    this.dryfire.play();
+                    console.log("Cant shoot");
+                }
             }
         });
 
@@ -102,8 +105,10 @@ export class FirstPersonController extends Node {
         doc.addEventListener('pointerlockchange', e => {
             if (doc.pointerLockElement === element) {
                 doc.addEventListener('pointermove', this.pointermoveHandler);
+                this.moving = true;
             } else {
                 doc.removeEventListener('pointermove', this.pointermoveHandler);
+                this.moving = false;
             }
         });
     }

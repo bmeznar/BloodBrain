@@ -19,8 +19,13 @@ import { Gun } from './Gun.js';
 class App extends Application {
 
     async start() {
+        this.gameTime = performance.now();
         this.loader = new GLTFLoader();
         await this.loader.load('../Assets/map/lab_map.gltf');
+
+        this.timeElement = document.querySelector("#win");
+        this.timeNode = document.createTextNode("0s");
+        this.timeElement.appendChild(this.timeNode);
 
         //this.loader_zombie = new GLTFLoader();
         //await this.loader_zombie.load('../Assets/zombie/zombie_v2.gltf');
@@ -139,8 +144,11 @@ class App extends Application {
     }
 
     update() {
-        if (this.controller.kills == 1) {
-            console.log("Victory");
+        if (this.controller.kills >= 1) {
+            this.controller.kills = -999999;
+            console.log(performance.now() - this.gameTime);
+            this.timeNode.nodeValue = ((performance.now() - this.gameTime) / 1000).toFixed(2) + "s";
+            document.getElementById("win").classList.remove("hidden");
         }
 
         this.time = performance.now();
@@ -176,7 +184,7 @@ class App extends Application {
 
             this.controller.bullets[i].update(dt);
             if (this.controller.bullets[i].despawn) {
-                this.controller.bullets[i].bullet_scene.nodes[0].translation = [9999, 9999, 9999];
+                this.controller.bullets[i].bullet_scene.nodes[0].translation = [9999, -9999, 9999];
                 //console.log(this.controller.bullets[i].sceneIndex);
                 this.scene.nodes.splice(this.controller.bullets[i].sceneIndex, 1);
                 //this.renderer.prepareScene(this.scene); 
