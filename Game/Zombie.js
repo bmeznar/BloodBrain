@@ -5,11 +5,14 @@ import { Renderer } from './Renderer.js';
 import {rotateZ, rotateX, rotateY} from './quat.js';
 
 export class Zombie {
-    constructor() {
+    constructor(controller) {
+        this.controller = controller;
+
         this.make_zombie();
 
         this.prevRandInt;
         this.prevRotation;
+        this.hitAudio = new Audio('../Assets/sound/grunt.wav');
     }
 
     async make_zombie(){
@@ -47,6 +50,7 @@ export class Zombie {
     update(){
         if(this.health <= 0){
             this.zombie_scene.nodes[0].translation = [0,-10,0];
+            this.controller.kills += 1;
             return;
         }
         //let rotation = this.zombie_scene.nodes[0].rotation[1] + 0.01;
@@ -200,6 +204,7 @@ export class Zombie {
     }
 
     take_damage(){
+        this.hitAudio.play();
         this.health -= 50;
     }
 }

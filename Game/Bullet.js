@@ -14,8 +14,8 @@ export class Bullet {
         this.despawn = false;
         this.sceneIndex = -1;
         this.velocity = [0, 0, 0];
-        this.acceleration = 50;
-        this.maxSpeed = 10;
+        this.acceleration =100;
+        this.maxSpeed = 100;
 
         this.spawn_bullet();
     }

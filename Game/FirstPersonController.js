@@ -69,8 +69,11 @@ export class FirstPersonController extends Node {
 
         this.gunAudio = new Audio('../Assets/sound/gunshotSound.wav');
         this.punchAudio = new Audio('../Assets/sound/punch.mp3');
+        this.dryfire = new Audio('../Assets/sound/dryfire.wav');
         
         this.last_taken_damage = 0;
+
+        this.kills = 0;
     }
 
     initHandlers() {
@@ -90,6 +93,7 @@ export class FirstPersonController extends Node {
                 this.timer = Math.floor(Date.now() / 1000);
                 this.shoot()
             } else {
+                this.dryfire.play();
                 console.log("Cant shoot");
             }
         });

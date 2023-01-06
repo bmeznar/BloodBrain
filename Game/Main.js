@@ -37,10 +37,6 @@ class App extends Application {
         //this.zombies = new Zombie();
         this.zombies = new Array();
 
-        for(let i = 0; i < 10; i++){
-            this.zombie = new Zombie();
-            this.zombies[i] = this.zombie;
-        }
         //console.log(this.zombies);
         this.gun = new Gun();
         //console.log(this.gun);
@@ -64,19 +60,25 @@ class App extends Application {
         this.shadowCamera.far = 50;*/
         //console.log(this.loader);
 
-        this.scene = await this.loader.loadScene(this.loader.defaultScene);
         //console.log(this.scene);
         //for(let i = 0; i < this.zombies.)
 
         //this.camera = await this.loader.loadNode('Camera');
         //console.log(this.camera);
 
+        //FIRST PERSON CONTROLLER
+        this.controller = new FirstPersonController(this.camera, this.canvas);
+
+        for(let i = 0; i < 10; i++){
+            this.zombie = new Zombie(this.controller);
+            this.zombies[i] = this.zombie;
+        }
+
+        this.scene = await this.loader.loadScene(this.loader.defaultScene);
+
         if (!this.scene || !this.camera) {
             throw new Error('Scene or Camera not present in glTF');
         }
-
-        //FIRST PERSON CONTROLLER
-        this.controller = new FirstPersonController(this.camera, this.canvas);
 
         //adding zombie nodes
         let index = this.scene.nodes.length;
@@ -137,6 +139,10 @@ class App extends Application {
     }
 
     update() {
+        if (this.controller.kills == 1) {
+            console.log("Victory");
+        }
+
         this.time = performance.now();
         const dt = (this.time - this.startTime) * 0.001;
         this.startTime = this.time;
