@@ -17,12 +17,13 @@ export class Physics {
 
         for(let i = 0; i < this.zombies.length; i++) {
             this.resolveCollision(this.controller.node, this.zombies[i].zombie_scene.nodes[0], this.getTransformedAABBForFirstPersonController(this.controller), this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]), false, false);
-            for(let i = 0; i < this.controller.bullets.length; i++) {
-                if (this.controller.bullets[i].bullet_scene) {
+            for(let j = 0; j < this.controller.bullets.length; j++) {
+                if (this.controller.bullets[j].bullet_scene) {
                     //console.log(this.controller.bullets[i]);
-                    this.resolveCollisionZombieBullet(this.controller.bullets[i], this.zombies[i], this.getTransformedAABB(this.controller.bullets[i].bullet_scene.nodes[0]), this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]));
+                    this.resolveCollisionZombieBullet(this.controller.bullets[j], this.zombies[i], this.getTransformedAABB(this.controller.bullets[j].bullet_scene.nodes[0]), this.getTransformedAABB(this.zombies[i].zombie_scene.nodes[0].children[0]));
                 }
             }
+    
         }
 
         // After moving, check for collision with every other node.
@@ -147,6 +148,7 @@ export class Physics {
         //a.updateMatrix();
         if(isZombie) {
             //console.log("ja");
+            //console.log(aBox, bBox);
             a.moveX = -a.moveX;
             a.moveY = -a.moveY;
             //a.translation = vec3.add(vec3.create(), a.zombie_scene.nodes[0].translation, minDirection);
@@ -165,13 +167,14 @@ export class Physics {
         // Check if there is collision.
 
         const isColliding = this.aabbIntersection(aBox, bBox);
+        
         if (!isColliding) {
             return;
         }
 
+        //console.log(b.health);
         a.despawn = true;
         b.take_damage();
-        console.log(b.health);
 
         //vec3.add(a.translation, a.translation, minDirection);
         //a.updateMatrix();    
