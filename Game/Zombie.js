@@ -15,6 +15,7 @@ export class Zombie {
         this.prevRandInt;
         this.prevRotation;
         this.hitAudio = new Audio('../Assets/sound/grunt.wav');
+        this.hitAudio.volume = 0.2;
     }
 
     async make_zombie(){

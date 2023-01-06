@@ -68,8 +68,11 @@ export class FirstPersonController extends Node {
         this.health = 100;
 
         this.gunAudio = new Audio('../Assets/sound/gunshotSound.wav');
+        this.gunAudio.volume = 0.2;
         this.punchAudio = new Audio('../Assets/sound/punch.mp3');
+        this.punchAudio.volume = 0.2;
         this.dryfire = new Audio('../Assets/sound/dryfire.wav');
+        this.dryfire.volume = 0.2;
         
         this.last_taken_damage = 0;
 
