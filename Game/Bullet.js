@@ -14,10 +14,11 @@ export class Bullet {
         this.despawn = false;
         this.sceneIndex = -1;
         this.velocity = [0, 0, 0];
-        this.acceleration =100;
-        this.maxSpeed = 100;
+        this.acceleration = 300;
+        this.maxSpeed = 1000;
+        this.firstSpawn = true;
 
-        this.spawn_bullet();
+        //this.spawn_bullet();
     }
 
     async spawn_bullet(){
@@ -40,11 +41,16 @@ export class Bullet {
     }
 
     update(dt){
-        if (this.initTime + 5 <= Math.floor(Date.now() / 1000)) {
+        if (this.initTime + 1 <= Math.floor(Date.now() / 1000)) {
             this.despawn = true;
         }
 
         if (this.bullet_scene) {
+            if (this.despawn) {
+                this.bullet_scene.nodes[0].translation = [9999, -9999, 9999];
+                return;
+            }
+
             const forward = vec3.set(vec3.create(), -Math.sin(this.yaw), 0, -Math.cos(this.yaw));
             const acc = vec3.create();
             vec3.add(acc, acc, forward);

@@ -90,15 +90,15 @@ export class FirstPersonController extends Node {
         
 
         element.addEventListener('click', event => {
-            if(event.button == 0 && doc.pointerLockElement === element && this.timer + 4.1 <= (Date.now() / 1000)){
+            if(event.button == 0 && doc.pointerLockElement === element && this.timer + 1.7 <= (Date.now() / 1000)){
                 this.timer = Math.floor(Date.now() / 1000);
                 this.shoot();
-                console.log(this.node.translation);
+                //console.log(this.node.translation);
             } else {
                 if (this.moving) {
                     this.dryfire.play();
-                    console.log("Cant shoot");
-                    console.log(this.node.translation);
+                    //console.log("Cant shoot");
+                    //console.log(this.node.translation);
                 }
             }
         });

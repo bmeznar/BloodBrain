@@ -82,7 +82,7 @@ class App extends Application {
         [25.605466842651367, -8.729140281677246], [20.439680099487305, -14.169455528259277], [14.979235649108887, -5.422432899475098],
         [-8.73986530303955, 13.192118644714355], [-14.927111625671387, 6.287947654724121],
         [-19.018274307250977, 12.627008438110352], [17.7182559967041, -11.624876022338867]];
-        for(let i = 0; i < 10; i++){
+        for(let i = 0; i < 20; i++){
             this.zombie = new Zombie(this.controller, positions[i][0], positions[i][1]);
             this.zombies[i] = this.zombie;
         }
@@ -179,6 +179,10 @@ class App extends Application {
         for(let i = 0; i < this.controller.bullets.length; i++){
             let index = this.scene.nodes.length;
             //console.log(this.scene.nodes);
+            if(this.controller.bullets[i].firstSpawn) {
+                this.controller.bullets[i].firstSpawn = false;
+                this.controller.bullets[i].spawn_bullet();
+            }
             //console.log(this.controller.bullets[i].bullet_scene);
             if (this.controller.bullets[i].bullet_scene) {
                 this.controller.bullets[i].sceneIndex = index + i;
@@ -190,7 +194,7 @@ class App extends Application {
 
             this.controller.bullets[i].update(dt);
             if (this.controller.bullets[i].despawn) {
-                this.controller.bullets[i].bullet_scene.nodes[0].translation = [9999, -9999, 9999];
+                //this.controller.bullets[i].bullet_scene.nodes[0].translation = [9999, -9999, 9999];
                 //console.log(this.controller.bullets[i].sceneIndex);
                 this.scene.nodes.splice(this.controller.bullets[i].sceneIndex, 1);
                 //this.renderer.prepareScene(this.scene); 

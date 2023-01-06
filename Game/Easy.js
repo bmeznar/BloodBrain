@@ -175,6 +175,10 @@ class App extends Application {
         for(let i = 0; i < this.controller.bullets.length; i++){
             let index = this.scene.nodes.length;
             //console.log(this.scene.nodes);
+            if(this.controller.bullets[i].firstSpawn) {
+                this.controller.bullets[i].firstSpawn = false;
+                this.controller.bullets[i].spawn_bullet();
+            }
             //console.log(this.controller.bullets[i].bullet_scene);
             if (this.controller.bullets[i].bullet_scene) {
                 this.controller.bullets[i].sceneIndex = index + i;
@@ -186,7 +190,7 @@ class App extends Application {
 
             this.controller.bullets[i].update(dt);
             if (this.controller.bullets[i].despawn) {
-                this.controller.bullets[i].bullet_scene.nodes[0].translation = [9999, -9999, 9999];
+                //this.controller.bullets[i].bullet_scene.nodes[0].translation = [9999, -9999, 9999];
                 //console.log(this.controller.bullets[i].sceneIndex);
                 this.scene.nodes.splice(this.controller.bullets[i].sceneIndex, 1);
                 //this.renderer.prepareScene(this.scene); 

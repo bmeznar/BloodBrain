@@ -54,6 +54,12 @@ export class Physics {
             && this.intervalIntersection(aabb1.min[2], aabb1.max[2], aabb2.min[2], aabb2.max[2]);
     }
 
+    aabbIntersectionZombieBullet(aabb1, aabb2) {
+        return this.intervalIntersection(aabb1.min[0] - 0.2, aabb1.max[0] + 0.2, aabb2.min[0] - 0.2, aabb2.max[0] + 0.2)
+            && this.intervalIntersection(aabb1.min[1] - 0.2, aabb1.max[1] + 0.2, aabb2.min[1] - 0.2, aabb2.max[1] + 0.2)
+            && this.intervalIntersection(aabb1.min[2] - 0.2, aabb1.max[2] + 0.2, aabb2.min[2] - 0.2, aabb2.max[2] + 0.2);
+    }
+
     getTransformedAABB(node) {
         // Transform all vertices of the AABB from local to global space.
         const transform = node.getGlobalTransform();
@@ -166,7 +172,7 @@ export class Physics {
         //const bBox = this.getTransformedAABB(b);
         // Check if there is collision.
 
-        const isColliding = this.aabbIntersection(aBox, bBox);
+        const isColliding = this.aabbIntersectionZombieBullet(aBox, bBox);
         
         if (!isColliding) {
             return;
